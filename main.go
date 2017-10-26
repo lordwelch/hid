@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/binary"
 	"fmt"
 	"os"
 )
@@ -32,7 +33,12 @@ func main() {
 	fmt.Printf("%08b\n", test[0])
 	test[0] |= LCTRL
 	fmt.Printf("%08b\n", test[0])
-	file, _ := os.Open("/dev/hidg0")
-	file.Write(test[:])
+	file, err := os.Open("/dev/hidg0", os.O_WRONLY, os.ModePerm)
+	file2, err2 := os.Open("test", os.O_WRONLY|os.O_CREATE, os.ModePerm)
+	fmt.Println(err)
+	fmt.Println(err2)
+	binary.Write(file, binary.BigEndian, test[:])
+	binary.Write(file2, binary.BigEndian, test[:])
 	file.Close()
+	file2.Close()
 }
