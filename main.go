@@ -34,5 +34,5 @@ func main() {
 	fmt.Printf("%08b\n", test[0])
 	file, _ := os.Open("/dev/hidg0")
 	file.Write(test[:])
-
+	file.Close()
 }
