@@ -37,8 +37,8 @@ func main() {
 	file2, err2 := os.OpenFile("test", os.O_WRONLY|os.O_CREATE, os.ModePerm)
 	fmt.Println(err)
 	fmt.Println(err2)
-	binary.Write(file, binary.LittleEndian, test[:])
-	binary.Write(file2, binary.LittleEndian, test[:])
+	binary.Write(file, binary.BigEndian, test[:])
+	binary.Write(file2, binary.BigEndian, test[:])
 	file.Close()
 	file2.Close()
 }
