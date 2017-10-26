@@ -33,8 +33,8 @@ func main() {
 	fmt.Printf("%08b\n", test[0])
 	test[0] |= LCTRL
 	fmt.Printf("%08b\n", test[0])
-	file, err := os.Open("/dev/hidg0", os.O_WRONLY, os.ModePerm)
-	file2, err2 := os.Open("test", os.O_WRONLY|os.O_CREATE, os.ModePerm)
+	file, err := os.OpenFile("/dev/hidg0", os.O_WRONLY, os.ModePerm)
+	file2, err2 := os.OpenFile("test", os.O_WRONLY|os.O_CREATE, os.ModePerm)
 	fmt.Println(err)
 	fmt.Println(err2)
 	binary.Write(file, binary.BigEndian, test[:])
