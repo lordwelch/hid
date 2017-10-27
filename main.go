@@ -30,9 +30,9 @@ func main() {
 		RALT,
 		RSUPER)
 	fmt.Println()
-	fmt.Printf("%08b\n", test[:])
-	test[0] |= LCTRL
-	fmt.Printf("%08b\n", test[:])
+	fmt.Printf("%08b\n", test[0])
+	//test[0] |= LCTRL
+	fmt.Printf("%08b\n", test[0])
 	file, err := os.OpenFile("/dev/hidg0", os.O_WRONLY, os.ModePerm)
 	file2, err2 := os.OpenFile("test", os.O_WRONLY|os.O_CREATE, os.ModePerm)
 	fmt.Println(err)
