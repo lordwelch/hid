@@ -19,8 +19,8 @@ const (
 
 func main() {
 	var (
-		test    [8]byte = [8]byte{0x00, 0x00, 0x4f, 0x00, 0x00, 0x00, 0x00, 0x00}
-		test1   [8]byte = [8]byte{0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x00, 0x00}
+		test    [8]byte = [8]byte{0x00, 0x00, 0x52, 0x00, 0x00, 0x00, 0x00, 0x00}
+		test1   [8]byte = [8]byte{0x00, 0x00, 0x4c, 0x00, 0x00, 0x00, 0x00, 0x00}
 		unpress [8]byte = [8]byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
 		write   []byte
 	)
@@ -40,16 +40,6 @@ func main() {
 
 	fmt.Println(err)
 	for i := 1; i <= 1000; i++ {
-		write = append(write, test[:]...)
-		write = append(write, unpress[:]...)
-		write = append(write, test[:]...)
-		write = append(write, unpress[:]...)
-		write = append(write, test[:]...)
-		write = append(write, unpress[:]...)
-		write = append(write, test[:]...)
-		write = append(write, unpress[:]...)
-		write = append(write, test[:]...)
-		write = append(write, unpress[:]...)
 		write = append(write, test[:]...)
 		write = append(write, unpress[:]...)
 		write = append(write, test1[:]...)
