@@ -36,14 +36,18 @@ func main() {
 	//test[0] |= LCTRL
 	fmt.Printf("%08b\n", test[0])
 	file, err := os.OpenFile("/dev/hidg0", os.O_WRONLY, os.ModePerm)
+	file2, err2 := os.OpenFile("test", os.O_WRONLY, os.ModePerm)
 
 	fmt.Println(err)
+	fmt.Println(err2)
 	for i := 1; i <= 100; i++ {
 		write = append(write, test[:]...)
 		write = append(write, unpress[:]...)
 	}
 	binary.Write(file, binary.BigEndian, write)
+	binary.Write(file2, binary.BigEndian, write)
 
 	file.Close()
+	file2.Close()
 
 }
