@@ -39,11 +39,17 @@ func main() {
 	file, err := os.OpenFile("/dev/hidg0", os.O_WRONLY, os.ModePerm)
 
 	fmt.Println(err)
-	for i := 1; i <= 1000; i++ {
-		write = append(write, test[:]...)
-		write = append(write, unpress[:]...)
-		write = append(write, test1[:]...)
-		write = append(write, unpress[:]...)
+	for j := 1; i <= 1000; i++ {
+		for i := 1; i <= 1000; i++ {
+			write = append(write, test[:]...)
+			write = append(write, unpress[:]...)
+			write = append(write, test1[:]...)
+			write = append(write, unpress[:]...)
+		}
+		write = append(write, LCTRL, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00)
+		write = append(write, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+		write = append(write, 0x00, 0x00, 0x2a, 0x00, 0x00, 0x00, 0x00, 0x00)
+		write = append(write, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
 	}
 	binary.Write(file, binary.BigEndian, write)
 
