@@ -39,7 +39,7 @@ func main() {
 	file, err := os.OpenFile("/dev/hidg0", os.O_WRONLY, os.ModePerm)
 
 	fmt.Println(err)
-	for j := 1; i <= 1000; i++ {
+	for j := 1; j <= 1000; j++ {
 		for i := 1; i <= 1000; i++ {
 			write = append(write, test[:]...)
 			write = append(write, unpress[:]...)
