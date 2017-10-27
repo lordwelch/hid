@@ -19,8 +19,9 @@ const (
 
 func main() {
 	var (
-		test    [8]byte = [...]byte{0x00, 0x00, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09}
-		unpress [8]byte = [...]byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
+		test    [8]byte = [8]byte{0x00, 0x00, 0x4f, 0x00, 0x00, 0x00, 0x00, 0x00}
+		test1   [8]byte = [8]byte{0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x00, 0x00}
+		unpress [8]byte = [8]byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
 		write   []byte
 	)
 	fmt.Printf("%08b\n%08b\n%08b\n%08b\n%08b\n%08b\n%08b\n%08b\n\n", LCTRL,
@@ -40,6 +41,18 @@ func main() {
 	fmt.Println(err)
 	for i := 1; i <= 1000; i++ {
 		write = append(write, test[:]...)
+		write = append(write, unpress[:]...)
+		write = append(write, test[:]...)
+		write = append(write, unpress[:]...)
+		write = append(write, test[:]...)
+		write = append(write, unpress[:]...)
+		write = append(write, test[:]...)
+		write = append(write, unpress[:]...)
+		write = append(write, test[:]...)
+		write = append(write, unpress[:]...)
+		write = append(write, test[:]...)
+		write = append(write, unpress[:]...)
+		write = append(write, test1[:]...)
 		write = append(write, unpress[:]...)
 	}
 	binary.Write(file, binary.BigEndian, write)
