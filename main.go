@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/binary"
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -17,41 +18,29 @@ const (
 	RSUPER
 )
 
+func Press(press [8]byte, file io.Writer) {
+	binary.Write(file, binary.BigEndian, press[:])
+}
+
 func main() {
 	var (
-		test    [8]byte = [8]byte{0x00, 0x00, 0x59, 0x5a, 0x5b, 0x5c, 0x5d, 0x5e}
-		test1   [8]byte = [8]byte{0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x00, 0x00}
+		press   [8]byte = [8]byte{0x00, 0x00, 0x51, 0x00, 0x00, 0x00, 0x00, 0x00} // down
+		press1  [8]byte = [8]byte{0x00, 0x00, 0x2a, 0x00, 0x00, 0x00, 0x00, 0x00} // backspace
+		press2  [8]byte = [8]byte{0x00, 0x00, 0x17, 0x00, 0x00, 0x00, 0x00, 0x00} // t
 		unpress [8]byte = [8]byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
-		write   []byte
 	)
-	fmt.Printf("%08b\n%08b\n%08b\n%08b\n%08b\n%08b\n%08b\n%08b\n\n", LCTRL,
-		LSHIFT,
-		LALT,
-		LSUPER,
-		RCTRL,
-		RSHIFT,
-		RALT,
-		RSUPER)
-	fmt.Println()
-	fmt.Printf("%08b\n", test[0])
-	//test[0] |= LCTRL
-	fmt.Printf("%08b\n", test[0])
+
 	file, err := os.OpenFile("/dev/hidg0", os.O_WRONLY, os.ModePerm)
 
 	fmt.Println(err)
 	for j := 1; j <= 1000; j++ {
-		for i := 1; i <= 1000; i++ {
-			write = append(write, test[:]...)
-			write = append(write, unpress[:]...)
-			write = append(write, test1[:]...)
-			write = append(write, unpress[:]...)
-		}
-		write = append(write, LCTRL, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00)
-		write = append(write, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
-		write = append(write, 0x00, 0x00, 0x2a, 0x00, 0x00, 0x00, 0x00, 0x00)
-		write = append(write, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+		Press(press, file)
+		Press(unpress, file)
+		Press(press1, file)
+		Press(unpress, file)
+		Press(press2, file)
+		Press(unpress, file)
 	}
-	binary.Write(file, binary.BigEndian, write)
 
 	file.Close()
 
