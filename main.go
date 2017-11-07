@@ -24,7 +24,7 @@ type Keys []Key
 
 type Args struct {
 	SHORTCUT string   `arg:"-S,help:Keymap cycle shortcut"`
-	ORDER    []string `arg:positional,help:Order of keymaps`
+	ORDER    []string `arg:"positional,help:Order of keymaps"`
 }
 
 const (
@@ -48,6 +48,7 @@ func Hold(press [8]byte, file io.Writer) {
 }
 
 func changeKeymap(r rune, keys map[string]Keys, args Args, hidg0 *os.File, currentKeyMap *int) {
+	fmt.Println(*currentKeyMap)
 	for keys[args.ORDER[(*currentKeyMap)]][r].name != r {
 		Press([8]byte{LCTRL, 0x00, 0x57, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
 		*currentKeyMap++
@@ -64,7 +65,7 @@ func main() {
 		err           error
 		keymapsF      []os.FileInfo
 		keys          map[string]Keys
-		cfgPath       = path.Join(os.Getenv("XDG_CONFIG_HOME"), "hid")
+		cfgPath       = "./" //path.Join(os.Getenv("XDG_CONFIG_HOME"), "hid")
 		stdin         = bufio.NewReader(os.Stdin)
 		currentKeyMap int
 	)
