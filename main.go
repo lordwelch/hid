@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"encoding/binary"
 	"encoding/json"
+	"fmt"
 	"io"
 	"io/ioutil"
 	"os"
@@ -20,6 +21,11 @@ type Key struct {
 }
 
 type Keys []Key
+
+type Args struct {
+	SHORTCUT string   `arg:"-S,help:Keymap cycle shortcut"`
+	ORDER    []string `arg:positional,help:Order of keymaps`
+}
 
 const (
 	LCTRL byte = 1 << iota
@@ -41,12 +47,19 @@ func Hold(press [8]byte, file io.Writer) {
 	binary.Write(file, binary.BigEndian, press[:])
 }
 
+func changeKeymap(r rune, keys map[string]Keys, args Args, hidg0 *os.File, currentKeyMap *int) {
+	for keys[args.ORDER[(*currentKeyMap)]][r].name != r {
+		Press([8]byte{LCTRL, 0x00, 0x57, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
+		*currentKeyMap++
+		if *currentKeyMap == len(keys) {
+			panic("key not in keymap")
+		}
+	}
+}
+
 func main() {
 	var (
-		args struct {
-			SHORTCUT string   `arg:"-S,help:Keymap cycle shortcut"`
-			ORDER    []string `arg:positional,help:Order of keymaps`
-		}
+		args          Args
 		hidg0         *os.File
 		err           error
 		keymapsF      []os.FileInfo
@@ -54,7 +67,6 @@ func main() {
 		cfgPath       = path.Join(os.Getenv("XDG_CONFIG_HOME"), "hid")
 		stdin         = bufio.NewReader(os.Stdin)
 		currentKeyMap int
-		good          bool
 	)
 	arg.MustParse(&args)
 	keymapsF, err = ioutil.ReadDir(cfgPath)
@@ -94,13 +106,21 @@ func main() {
 			T.Close()
 		}
 	}
-	for good {
-		var r rune
+	for {
+		var (
+			r      rune
+			flag   byte
+			report [6]byte
+		)
+
 		r, _, err = stdin.ReadRune()
-		for keys[args.ORDER[currentKeyMap]][r].name != r {
-			Press([8]byte{LCTRL, 0x00, 0x57, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
-			currentKeyMap++
+		if err != nil {
+			panic(err)
 		}
+		changeKeymap(r, keys, args, hidg0, &currentKeyMap)
+		_, err = fmt.Sscanf(keys[args.ORDER[currentKeyMap]][r].modifier, "%b", flag)
+		binary.PutVarint(report[:], int64(keys[args.ORDER[currentKeyMap]][r].decimal))
+		Press([8]byte{flag, 0, report[0], report[1], report[2], report[3], report[4], report[5]}, hidg0)
 
 	}
 
