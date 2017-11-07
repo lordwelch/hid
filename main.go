@@ -136,6 +136,8 @@ func main() {
 		changeKeymap(r, keys, args, hidg0, &currentKeyMap)
 		_, err = fmt.Sscanf(keys[args.ORDER[currentKeyMap]][string(r)].Modifier, "%b", flag)
 		binary.LittleEndian.PutUint16(report[:], uint16(keys[args.ORDER[currentKeyMap]][string(r)].Decimal))
+		fmt.Println("report: ", report)
+		fmt.Println("decimal: ", keys[args.ORDER[currentKeyMap]][string(r)].Decimal)
 		Press([8]byte{flag, 0, report[0], report[1], report[2], report[3], report[4], report[5]}, hidg0)
 
 	}
