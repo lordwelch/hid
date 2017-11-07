@@ -85,6 +85,8 @@ func main() {
 			ext string
 		)
 
+		fmt.Println(file.Name())
+
 		ext = path.Ext(file.Name())
 		if strings.ToLower(ext) == "json" {
 			var (
