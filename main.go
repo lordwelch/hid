@@ -85,8 +85,6 @@ func main() {
 			ext string
 		)
 
-		fmt.Println(file.Name())
-
 		ext = path.Ext(file.Name())
 		if strings.ToLower(ext) == "json" {
 			var (
@@ -94,6 +92,7 @@ func main() {
 				T       *os.File
 				content []byte
 			)
+			fmt.Println(file.Name())
 			T, err = os.Open(strings.TrimSuffix(file.Name(), ext))
 			if err != nil {
 				panic(err)
@@ -105,6 +104,7 @@ func main() {
 			}
 
 			json.Unmarshal(content, tmp)
+			fmt.Println(strings.TrimSuffix(file.Name(), ext))
 			keys[strings.TrimSuffix(file.Name(), ext)] = tmp
 			T.Close()
 		}
