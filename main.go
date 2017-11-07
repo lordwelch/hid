@@ -53,7 +53,7 @@ func changeKeymap(r rune, keys map[string]Keys, args Args, hidg0 *os.File, curre
 	fmt.Println(args)
 	kmap := args.ORDER[(*currentKeyMap)]
 	fmt.Println(kmap)
-	for keys[kmap][string(r)].Decimal != 0 {
+	for keys[kmap][string(r)].Decimal == 0 {
 		Press([8]byte{LCTRL, 0x00, 0x57, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
 		*currentKeyMap++
 		if *currentKeyMap == len(keys) {
