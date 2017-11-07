@@ -111,6 +111,7 @@ func main() {
 			}
 
 			err = json.Unmarshal(content, &tmp)
+	fmt.Println(tmp)
 			if err != nil {
 				panic(err)
 			}
@@ -120,7 +121,6 @@ func main() {
 			T.Close()
 		}
 	}
-	fmt.Println(keys)
 	for {
 		var (
 			r      rune
