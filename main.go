@@ -15,8 +15,8 @@ import (
 )
 
 type Key struct {
-	Modifier string // `json:"modifier"`
-	Decimal  int    // `json:"decimal"`
+	Modifier string `json:"modifier"`
+	Decimal  int    `json:"decimal"`
 }
 
 type Keys map[string]Key
@@ -53,7 +53,7 @@ func changeKeymap(r rune, keys map[string]Keys, args Args, hidg0 *os.File, curre
 	fmt.Println(args)
 	kmap := args.ORDER[(*currentKeyMap)]
 	fmt.Println(kmap)
-	for keys[kmap][string(r)].decimal != 0 {
+	for keys[kmap][string(r)].Decimal != 0 {
 		Press([8]byte{LCTRL, 0x00, 0x57, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
 		*currentKeyMap++
 		if *currentKeyMap == len(keys) {
@@ -68,7 +68,7 @@ func main() {
 		hidg0         *os.File
 		err           error
 		keymapsF      []os.FileInfo
-		keys          = interface{} //make(map[string]Keys)
+		keys          = make(map[string]Keys)
 		cfgPath       = "./" //path.Join(os.Getenv("XDG_CONFIG_HOME"), "hid")
 		stdin         = bufio.NewReader(os.Stdin)
 		currentKeyMap int
@@ -111,7 +111,6 @@ func main() {
 			}
 
 			err = json.Unmarshal(content, &tmp)
-	fmt.Println(tmp)
 			if err != nil {
 				panic(err)
 			}
@@ -121,6 +120,7 @@ func main() {
 			T.Close()
 		}
 	}
+	fmt.Println(keys)
 	for {
 		var (
 			r      rune
@@ -134,8 +134,8 @@ func main() {
 			panic(err)
 		}
 		changeKeymap(r, keys, args, hidg0, &currentKeyMap)
-		_, err = fmt.Sscanf(keys[args.ORDER[currentKeyMap]][string(r)].modifier, "%b", flag)
-		binary.PutVarint(report[:], int64(keys[args.ORDER[currentKeyMap]][string(r)].decimal))
+		_, err = fmt.Sscanf(keys[args.ORDER[currentKeyMap]][string(r)].Modifier, "%b", flag)
+		binary.PutVarint(report[:], int64(keys[args.ORDER[currentKeyMap]][string(r)].Decimal))
 		Press([8]byte{flag, 0, report[0], report[1], report[2], report[3], report[4], report[5]}, hidg0)
 
 	}
