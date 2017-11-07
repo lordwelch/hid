@@ -130,6 +130,11 @@ func main() {
 
 		r, _, err = stdin.ReadRune()
 		fmt.Printf("%s\n", string(r))
+
+		if err == io.EOF {
+			break
+		}
+
 		if err != nil {
 			panic(err)
 		}
@@ -141,7 +146,7 @@ func main() {
 		Press([8]byte{flag, 0, report[0], report[1], report[2], report[3], report[4], report[5]}, hidg0)
 
 	}
-
+	fmt.Println("Success!")
 	hidg0.Close()
 
 }
