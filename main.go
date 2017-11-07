@@ -15,12 +15,11 @@ import (
 )
 
 type Key struct {
-	name     rune
 	modifier string
 	decimal  int
 }
 
-type Keys []Key
+type Keys map[string]Key
 
 type Args struct {
 	SHORTCUT string   `arg:"-S,help:Keymap cycle shortcut"`
@@ -52,7 +51,7 @@ func changeKeymap(r rune, keys map[string]Keys, args Args, hidg0 *os.File, curre
 	fmt.Println(args)
 	kmap := args.ORDER[(*currentKeyMap)]
 	fmt.Println(kmap)
-	for keys[kmap][r].name != r {
+	for keys[kmap][string(r)].decimal != 0 {
 		Press([8]byte{LCTRL, 0x00, 0x57, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
 		*currentKeyMap++
 		if *currentKeyMap == len(keys) {
@@ -127,8 +126,8 @@ func main() {
 			panic(err)
 		}
 		changeKeymap(r, keys, args, hidg0, &currentKeyMap)
-		_, err = fmt.Sscanf(keys[args.ORDER[currentKeyMap]][r].modifier, "%b", flag)
-		binary.PutVarint(report[:], int64(keys[args.ORDER[currentKeyMap]][r].decimal))
+		_, err = fmt.Sscanf(keys[args.ORDER[currentKeyMap]][string(r)].modifier, "%b", flag)
+		binary.PutVarint(report[:], int64(keys[args.ORDER[currentKeyMap]][string(r)].decimal))
 		Press([8]byte{flag, 0, report[0], report[1], report[2], report[3], report[4], report[5]}, hidg0)
 
 	}
