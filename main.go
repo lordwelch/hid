@@ -15,8 +15,8 @@ import (
 )
 
 type Key struct {
-	modifier string
-	decimal  int
+	Modifier string `json:"modifier"`
+	Decimal  int    `json:"decimal"`
 }
 
 type Keys map[string]Key
