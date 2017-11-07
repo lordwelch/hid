@@ -115,6 +115,7 @@ func main() {
 			keys[strings.TrimSuffix(file.Name(), ext)] = tmp
 			T.Close()
 		}
+		fmt.Println(keys)
 	}
 	for {
 		var (
