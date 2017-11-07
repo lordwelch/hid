@@ -64,7 +64,7 @@ func main() {
 		hidg0         *os.File
 		err           error
 		keymapsF      []os.FileInfo
-		keys          map[string]Keys
+		keys          = make(map[string]Keys)
 		cfgPath       = "./" //path.Join(os.Getenv("XDG_CONFIG_HOME"), "hid")
 		stdin         = bufio.NewReader(os.Stdin)
 		currentKeyMap int
