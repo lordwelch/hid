@@ -96,7 +96,7 @@ func main() {
 				content []byte
 			)
 			fmt.Println(file.Name())
-			T, err = os.Open(strings.TrimSuffix(file.Name(), ext))
+			T, err = os.Open(file.Name())
 			if err != nil {
 				panic(err)
 			}
