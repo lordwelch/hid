@@ -49,6 +49,7 @@ func Hold(press [8]byte, file io.Writer) {
 
 func changeKeymap(r rune, keys map[string]Keys, args Args, hidg0 *os.File, currentKeyMap *int) {
 	fmt.Println(*currentKeyMap)
+	fmt.Println(args)
 	for keys[args.ORDER[(*currentKeyMap)]][r].name != r {
 		Press([8]byte{LCTRL, 0x00, 0x57, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
 		*currentKeyMap++
