@@ -110,7 +110,11 @@ func main() {
 				panic(err)
 			}
 
-			json.Unmarshal(content, tmp)
+			err = json.Unmarshal(content, tmp)
+			if err != nil {
+				panic(err)
+			}
+
 			fmt.Println(strings.TrimSuffix(file.Name(), ext))
 			keys[strings.TrimSuffix(file.Name(), ext)] = tmp
 			T.Close()
