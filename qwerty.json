@@ -1,378 +1,378 @@
 {
-	"0" : {
+	"0": {
 		"modifier": "00000000",
 		"decimal": 39
 	},
-	"1" : {
+	"1": {
 		"modifier": "00000000",
 		"decimal": 30
 	},
-	"2" : {
+	"2": {
 		"modifier": "00000000",
 		"decimal": 31
 	},
-	"3" : {
+	"3": {
 		"modifier": "00000000",
 		"decimal": 32
 	},
-	"4" : {
+	"4": {
 		"modifier": "00000000",
 		"decimal": 33
 	},
-	"5" : {
+	"5": {
 		"modifier": "00000000",
 		"decimal": 34
 	},
-	"6" : {
+	"6": {
 		"modifier": "00000000",
 		"decimal": 35
 	},
-	"7" : {
+	"7": {
 		"modifier": "00000000",
 		"decimal": 36
 	},
-	"8" : {
+	"8": {
 		"modifier": "00000000",
 		"decimal": 37
 	},
-	"9" : {
+	"9": {
 		"modifier": "00000000",
 		"decimal": 38
 	},
-	"`" : {
-		"modifier": "00000000",
-		"decimal": 53
+	"!": {
+		"modifier": "00000010",
+		"decimal": 30
 	},
-	"[" : {
-		"modifier": "00000000",
-		"decimal": 47
+	"#": {
+		"modifier": "00000010",
+		"decimal": 32
 	},
-	"]" : {
-		"modifier": "00000000",
-		"decimal": 48
+	"$": {
+		"modifier": "00000010",
+		"decimal": 33
 	},
-	"'" : {
+	"%": {
+		"modifier": "00000010",
+		"decimal": 34
+	},
+	"&": {
+		"modifier": "00000010",
+		"decimal": 36
+	},
+	"'": {
 		"modifier": "00000000",
 		"decimal": 52
 	},
-	"," : {
-		"modifier": "00000000",
-		"decimal": 54
-	},
-	"." : {
-		"modifier": "00000000",
-		"decimal": 55
-	},
-	"p" : {
-		"modifier": "00000000",
-		"decimal": 19
-	},
-	"y" : {
-		"modifier": "00000000",
-		"decimal": 28
-	},
-	"f" : {
-		"modifier": "00000000",
-		"decimal": 9
-	},
-	"g" : {
-		"modifier": "00000000",
-		"decimal": 10
-	},
-	"c" : {
-		"modifier": "00000000",
-		"decimal": 6
-	},
-	"r" : {
-		"modifier": "00000000",
-		"decimal": 21
-	},
-	"l" : {
-		"modifier": "00000000",
-		"decimal": 15
-	},
-	"/" : {
-		"modifier": "00000000",
-		"decimal": 56
-	},
-	"=" : {
-		"modifier": "00000000",
-		"decimal": 46
-	},
-	"\\" : {
-		"modifier": "00000000",
-		"decimal": 49
-	},
-	"a" : {
-		"modifier": "00000000",
-		"decimal": 4
-	},
-	"o" : {
-		"modifier": "00000000",
-		"decimal": 18
-	},
-	"e" : {
-		"modifier": "00000000",
-		"decimal": 8
-	},
-	"u" : {
-		"modifier": "00000000",
-		"decimal": 24
-	},
-	"i" : {
-		"modifier": "00000000",
-		"decimal": 12
-	},
-	"d" : {
-		"modifier": "00000000",
-		"decimal": 7
-	},
-	"h" : {
-		"modifier": "00000000",
-		"decimal": 11
-	},
-	"t" : {
-		"modifier": "00000000",
-		"decimal": 23
-	},
-	"n" : {
-		"modifier": "00000000",
-		"decimal": 17
-	},
-	"s" : {
-		"modifier": "00000000",
-		"decimal": 22
-	},
-	"-" : {
-		"modifier": "00000000",
-		"decimal": 45
-	},
-	";" : {
-		"modifier": "00000000",
-		"decimal": 51
-	},
-	"q" : {
-		"modifier": "00000000",
-		"decimal": 20
-	},
-	"j" : {
-		"modifier": "00000000",
-		"decimal": 13
-	},
-	"k" : {
-		"modifier": "00000000",
-		"decimal": 14
-	},
-	"x" : {
-		"modifier": "00000000",
-		"decimal": 27
-	},
-	"b" : {
-		"modifier": "00000000",
-		"decimal": 5
-	},
-	"m" : {
-		"modifier": "00000000",
-		"decimal": 16
-	},
-	"w" : {
-		"modifier": "00000000",
-		"decimal": 26
-	},
-	"v" : {
-		"modifier": "00000000",
-		"decimal": 25
-	},
-	"z" : {
-		"modifier": "00000000",
-		"decimal": 29
-	},
-	"~" : {
-		"modifier": "00000010",
-		"decimal": 53
-	},
-	"!" : {
-		"modifier": "00000010",
-		"decimal": 30
-	},
-	"@" : {
-		"modifier": "00000010",
-		"decimal": 31
-	},
-	"#" : {
-		"modifier": "00000010",
-		"decimal": 32
-	},
-	"$" : {
-		"modifier": "00000010",
-		"decimal": 33
-	},
-	"%" : {
-		"modifier": "00000010",
-		"decimal": 34
-	},
-	"^" : {
-		"modifier": "00000010",
-		"decimal": 35
-	},
-	"&" : {
-		"modifier": "00000010",
-		"decimal": 36
-	},
-	"*" : {
-		"modifier": "00000010",
-		"decimal": 37
-	},
-	"(" : {
+	"(": {
 		"modifier": "00000010",
 		"decimal": 38
 	},
-	")" : {
+	")": {
 		"modifier": "00000010",
 		"decimal": 39
 	},
-	"{" : {
+	"*": {
 		"modifier": "00000010",
-		"decimal": 47
+		"decimal": 37
 	},
-	"}" : {
-		"modifier": "00000010",
-		"decimal": 48
-	},
-	"\"" : {
-		"modifier": "00000010",
-		"decimal": 52
-	},
-	"<" : {
-		"modifier": "00000010",
-		"decimal": 54
-	},
-	">" : {
-		"modifier": "00000010",
-		"decimal": 55
-	},
-	"P" : {
-		"modifier": "00000010",
-		"decimal": 19
-	},
-	"Y" : {
-		"modifier": "00000010",
-		"decimal": 28
-	},
-	"F" : {
-		"modifier": "00000010",
-		"decimal": 9
-	},
-	"G" : {
-		"modifier": "00000010",
-		"decimal": 10
-	},
-	"C" : {
-		"modifier": "00000010",
-		"decimal": 6
-	},
-	"R" : {
-		"modifier": "00000010",
-		"decimal": 21
-	},
-	"L" : {
-		"modifier": "00000010",
-		"decimal": 15
-	},
-	"?" : {
-		"modifier": "00000010",
-		"decimal": 56
-	},
-	"+" : {
+	"+": {
 		"modifier": "00000010",
 		"decimal": 46
 	},
-	"|" : {
-		"modifier": "00000010",
-		"decimal": 49
+	",": {
+		"modifier": "00000000",
+		"decimal": 54
 	},
-	"A" : {
-		"modifier": "00000010",
-		"decimal": 4
-	},
-	"O" : {
-		"modifier": "00000010",
-		"decimal": 18
-	},
-	"E" : {
-		"modifier": "00000010",
-		"decimal": 8
-	},
-	"U" : {
-		"modifier": "00000010",
-		"decimal": 24
-	},
-	"I" : {
-		"modifier": "00000010",
-		"decimal": 12
-	},
-	"D" : {
-		"modifier": "00000010",
-		"decimal": 7
-	},
-	"H" : {
-		"modifier": "00000010",
-		"decimal": 11
-	},
-	"T" : {
-		"modifier": "00000010",
-		"decimal": 23
-	},
-	"N" : {
-		"modifier": "00000010",
-		"decimal": 17
-	},
-	"S" : {
-		"modifier": "00000010",
-		"decimal": 22
-	},
-	"_" : {
-		"modifier": "00000010",
+	"-": {
+		"modifier": "00000000",
 		"decimal": 45
 	},
-	":" : {
+	".": {
+		"modifier": "00000000",
+		"decimal": 55
+	},
+	"/": {
+		"modifier": "00000000",
+		"decimal": 56
+	},
+	":": {
 		"modifier": "00000010",
 		"decimal": 51
 	},
-	"Q" : {
-		"modifier": "00000010",
-		"decimal": 20
+	";": {
+		"modifier": "00000000",
+		"decimal": 51
 	},
-	"J" : {
+	"<": {
 		"modifier": "00000010",
-		"decimal": 13
+		"decimal": 54
 	},
-	"K" : {
+	"=": {
+		"modifier": "00000000",
+		"decimal": 46
+	},
+	">": {
 		"modifier": "00000010",
-		"decimal": 14
+		"decimal": 55
 	},
-	"X" : {
+	"?": {
 		"modifier": "00000010",
-		"decimal": 27
+		"decimal": 56
 	},
-	"B" : {
+	"@": {
+		"modifier": "00000010",
+		"decimal": 31
+	},
+	"A": {
+		"modifier": "00000010",
+		"decimal": 4
+	},
+	"B": {
 		"modifier": "00000010",
 		"decimal": 5
 	},
-	"M" : {
+	"C": {
+		"modifier": "00000010",
+		"decimal": 6
+	},
+	"D": {
+		"modifier": "00000010",
+		"decimal": 7
+	},
+	"E": {
+		"modifier": "00000010",
+		"decimal": 8
+	},
+	"F": {
+		"modifier": "00000010",
+		"decimal": 9
+	},
+	"G": {
+		"modifier": "00000010",
+		"decimal": 10
+	},
+	"H": {
+		"modifier": "00000010",
+		"decimal": 11
+	},
+	"I": {
+		"modifier": "00000010",
+		"decimal": 12
+	},
+	"J": {
+		"modifier": "00000010",
+		"decimal": 13
+	},
+	"K": {
+		"modifier": "00000010",
+		"decimal": 14
+	},
+	"L": {
+		"modifier": "00000010",
+		"decimal": 15
+	},
+	"M": {
 		"modifier": "00000010",
 		"decimal": 16
 	},
-	"W" : {
+	"N": {
 		"modifier": "00000010",
-		"decimal": 26
+		"decimal": 17
 	},
-	"V" : {
+	"O": {
+		"modifier": "00000010",
+		"decimal": 18
+	},
+	"P": {
+		"modifier": "00000010",
+		"decimal": 19
+	},
+	"Q": {
+		"modifier": "00000010",
+		"decimal": 20
+	},
+	"R": {
+		"modifier": "00000010",
+		"decimal": 21
+	},
+	"S": {
+		"modifier": "00000010",
+		"decimal": 22
+	},
+	"T": {
+		"modifier": "00000010",
+		"decimal": 23
+	},
+	"U": {
+		"modifier": "00000010",
+		"decimal": 24
+	},
+	"V": {
 		"modifier": "00000010",
 		"decimal": 25
 	},
-	"Z" : {
+	"W": {
+		"modifier": "00000010",
+		"decimal": 26
+	},
+	"X": {
+		"modifier": "00000010",
+		"decimal": 27
+	},
+	"Y": {
+		"modifier": "00000010",
+		"decimal": 28
+	},
+	"Z": {
 		"modifier": "00000010",
 		"decimal": 29
+	},
+	"[": {
+		"modifier": "00000000",
+		"decimal": 47
+	},
+	"\"": {
+		"modifier": "00000010",
+		"decimal": 52
+	},
+	"\\": {
+		"modifier": "00000000",
+		"decimal": 49
+	},
+	"]": {
+		"modifier": "00000000",
+		"decimal": 48
+	},
+	"^": {
+		"modifier": "00000010",
+		"decimal": 35
+	},
+	"_": {
+		"modifier": "00000010",
+		"decimal": 45
+	},
+	"`": {
+		"modifier": "00000000",
+		"decimal": 53
+	},
+	"a": {
+		"modifier": "00000000",
+		"decimal": 4
+	},
+	"b": {
+		"modifier": "00000000",
+		"decimal": 5
+	},
+	"c": {
+		"modifier": "00000000",
+		"decimal": 6
+	},
+	"d": {
+		"modifier": "00000000",
+		"decimal": 7
+	},
+	"e": {
+		"modifier": "00000000",
+		"decimal": 8
+	},
+	"f": {
+		"modifier": "00000000",
+		"decimal": 9
+	},
+	"g": {
+		"modifier": "00000000",
+		"decimal": 10
+	},
+	"h": {
+		"modifier": "00000000",
+		"decimal": 11
+	},
+	"i": {
+		"modifier": "00000000",
+		"decimal": 12
+	},
+	"j": {
+		"modifier": "00000000",
+		"decimal": 13
+	},
+	"k": {
+		"modifier": "00000000",
+		"decimal": 14
+	},
+	"l": {
+		"modifier": "00000000",
+		"decimal": 15
+	},
+	"m": {
+		"modifier": "00000000",
+		"decimal": 16
+	},
+	"n": {
+		"modifier": "00000000",
+		"decimal": 17
+	},
+	"o": {
+		"modifier": "00000000",
+		"decimal": 18
+	},
+	"p": {
+		"modifier": "00000000",
+		"decimal": 19
+	},
+	"q": {
+		"modifier": "00000000",
+		"decimal": 20
+	},
+	"r": {
+		"modifier": "00000000",
+		"decimal": 21
+	},
+	"s": {
+		"modifier": "00000000",
+		"decimal": 22
+	},
+	"t": {
+		"modifier": "00000000",
+		"decimal": 23
+	},
+	"u": {
+		"modifier": "00000000",
+		"decimal": 24
+	},
+	"v": {
+		"modifier": "00000000",
+		"decimal": 25
+	},
+	"w": {
+		"modifier": "00000000",
+		"decimal": 26
+	},
+	"x": {
+		"modifier": "00000000",
+		"decimal": 27
+	},
+	"y": {
+		"modifier": "00000000",
+		"decimal": 28
+	},
+	"z": {
+		"modifier": "00000000",
+		"decimal": 29
+	},
+	"{": {
+		"modifier": "00000010",
+		"decimal": 47
+	},
+	"|": {
+		"modifier": "00000010",
+		"decimal": 49
+	},
+	"}": {
+		"modifier": "00000010",
+		"decimal": 48
+	},
+	"~": {
+		"modifier": "00000010",
+		"decimal": 53
 	}
 }

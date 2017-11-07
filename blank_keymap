@@ -1,377 +1,377 @@
 
 : {
 		"modifier": "00000000",
-		"key": 39
+		"decimal": 39
 	},
 : {
 		"modifier": "00000000",
-		"key": 30
+		"decimal": 30
 	},
 : {
 		"modifier": "00000000",
-		"key": 31
+		"decimal": 31
 	},
 : {
 		"modifier": "00000000",
-		"key": 32
+		"decimal": 32
 	},
 : {
 		"modifier": "00000000",
-		"key": 33
+		"decimal": 33
 	},
 : {
 		"modifier": "00000000",
-		"key": 34
+		"decimal": 34
 	},
 : {
 		"modifier": "00000000",
-		"key": 35
+		"decimal": 35
 	},
 : {
 		"modifier": "00000000",
-		"key": 36
+		"decimal": 36
 	},
 : {
 		"modifier": "00000000",
-		"key": 37
+		"decimal": 37
 	},
 : {
 		"modifier": "00000000",
-		"key": 38
+		"decimal": 38
 	},
 : {
 		"modifier": "00000000",
-		"key": 53
+		"decimal": 53
 	},
 : {
 		"modifier": "00000000",
-		"key": 47
+		"decimal": 47
 	},
 : {
 		"modifier": "00000000",
-		"key": 48
+		"decimal": 48
 	},
 : {
 		"modifier": "00000000",
-		"key": 52
+		"decimal": 52
 	},
 : {
 		"modifier": "00000000",
-		"key": 54
+		"decimal": 54
 	},
 : {
 		"modifier": "00000000",
-		"key": 55
+		"decimal": 55
 	},
 : {
 		"modifier": "00000000",
-		"key": 19
+		"decimal": 19
 	},
 : {
 		"modifier": "00000000",
-		"key": 28
+		"decimal": 28
 	},
 : {
 		"modifier": "00000000",
-		"key": 9
+		"decimal": 9
 	},
 : {
 		"modifier": "00000000",
-		"key": 10
+		"decimal": 10
 	},
 : {
 		"modifier": "00000000",
-		"key": 6
+		"decimal": 6
 	},
 : {
 		"modifier": "00000000",
-		"key": 21
+		"decimal": 21
 	},
 : {
 		"modifier": "00000000",
-		"key": 15
+		"decimal": 15
 	},
 : {
 		"modifier": "00000000",
-		"key": 56
+		"decimal": 56
 	},
 : {
 		"modifier": "00000000",
-		"key": 46
+		"decimal": 46
 	},
 : {
 		"modifier": "00000000",
-		"key": 49
+		"decimal": 49
 	},
 : {
 		"modifier": "00000000",
-		"key": 4
+		"decimal": 4
 	},
 : {
 		"modifier": "00000000",
-		"key": 18
+		"decimal": 18
 	},
 : {
 		"modifier": "00000000",
-		"key": 8
+		"decimal": 8
 	},
 : {
 		"modifier": "00000000",
-		"key": 24
+		"decimal": 24
 	},
 : {
 		"modifier": "00000000",
-		"key": 12
+		"decimal": 12
 	},
 : {
 		"modifier": "00000000",
-		"key": 7
+		"decimal": 7
 	},
 : {
 		"modifier": "00000000",
-		"key": 11
+		"decimal": 11
 	},
 : {
 		"modifier": "00000000",
-		"key": 23
+		"decimal": 23
 	},
 : {
 		"modifier": "00000000",
-		"key": 17
+		"decimal": 17
 	},
 : {
 		"modifier": "00000000",
-		"key": 22
+		"decimal": 22
 	},
 : {
 		"modifier": "00000000",
-		"key": 45
+		"decimal": 45
 	},
 : {
 		"modifier": "00000000",
-		"key": 51
+		"decimal": 51
 	},
 : {
 		"modifier": "00000000",
-		"key": 20
+		"decimal": 20
 	},
 : {
 		"modifier": "00000000",
-		"key": 13
+		"decimal": 13
 	},
 : {
 		"modifier": "00000000",
-		"key": 14
+		"decimal": 14
 	},
 : {
 		"modifier": "00000000",
-		"key": 27
+		"decimal": 27
 	},
 : {
 		"modifier": "00000000",
-		"key": 5
+		"decimal": 5
 	},
 : {
 		"modifier": "00000000",
-		"key": 16
+		"decimal": 16
 	},
 : {
 		"modifier": "00000000",
-		"key": 26
+		"decimal": 26
 	},
 : {
 		"modifier": "00000000",
-		"key": 25
+		"decimal": 25
 	},
 : {
 		"modifier": "00000000",
-		"key": 29
+		"decimal": 29
 	},
 : {
 		"modifier": "00000010",
-		"key": 53
+		"decimal": 53
 	},
 : {
 		"modifier": "00000010",
-		"key": 30
+		"decimal": 30
 	},
 : {
 		"modifier": "00000010",
-		"key": 31
+		"decimal": 31
 	},
 : {
 		"modifier": "00000010",
-		"key": 32
+		"decimal": 32
 	},
 : {
 		"modifier": "00000010",
-		"key": 33
+		"decimal": 33
 	},
 : {
 		"modifier": "00000010",
-		"key": 34
+		"decimal": 34
 	},
 : {
 		"modifier": "00000010",
-		"key": 35
+		"decimal": 35
 	},
 : {
 		"modifier": "00000010",
-		"key": 36
+		"decimal": 36
 	},
 : {
 		"modifier": "00000010",
-		"key": 37
+		"decimal": 37
 	},
 : {
 		"modifier": "00000010",
-		"key": 38
+		"decimal": 38
 	},
 : {
 		"modifier": "00000010",
-		"key": 39
+		"decimal": 39
 	},
 : {
 		"modifier": "00000010",
-		"key": 47
+		"decimal": 47
 	},
 : {
 		"modifier": "00000010",
-		"key": 48
+		"decimal": 48
 	},
 : {
 		"modifier": "00000010",
-		"key": 52
+		"decimal": 52
 	},
 : {
 		"modifier": "00000010",
-		"key": 54
+		"decimal": 54
 	},
 : {
 		"modifier": "00000010",
-		"key": 55
+		"decimal": 55
 	},
 : {
 		"modifier": "00000010",
-		"key": 19
+		"decimal": 19
 	},
 : {
 		"modifier": "00000010",
-		"key": 28
+		"decimal": 28
 	},
 : {
 		"modifier": "00000010",
-		"key": 9
+		"decimal": 9
 	},
 : {
 		"modifier": "00000010",
-		"key": 10
+		"decimal": 10
 	},
 : {
 		"modifier": "00000010",
-		"key": 6
+		"decimal": 6
 	},
 : {
 		"modifier": "00000010",
-		"key": 21
+		"decimal": 21
 	},
 : {
 		"modifier": "00000010",
-		"key": 15
+		"decimal": 15
 	},
 : {
 		"modifier": "00000010",
-		"key": 56
+		"decimal": 56
 	},
 : {
 		"modifier": "00000010",
-		"key": 46
+		"decimal": 46
 	},
 : {
 		"modifier": "00000010",
-		"key": 49
+		"decimal": 49
 	},
 : {
 		"modifier": "00000010",
-		"key": 4
+		"decimal": 4
 	},
 : {
 		"modifier": "00000010",
-		"key": 18
+		"decimal": 18
 	},
 : {
 		"modifier": "00000010",
-		"key": 8
+		"decimal": 8
 	},
 : {
 		"modifier": "00000010",
-		"key": 24
+		"decimal": 24
 	},
 : {
 		"modifier": "00000010",
-		"key": 12
+		"decimal": 12
 	},
 : {
 		"modifier": "00000010",
-		"key": 7
+		"decimal": 7
 	},
 : {
 		"modifier": "00000010",
-		"key": 11
+		"decimal": 11
 	},
 : {
 		"modifier": "00000010",
-		"key": 23
+		"decimal": 23
 	},
 : {
 		"modifier": "00000010",
-		"key": 17
+		"decimal": 17
 	},
 : {
 		"modifier": "00000010",
-		"key": 22
+		"decimal": 22
 	},
 : {
 		"modifier": "00000010",
-		"key": 45
+		"decimal": 45
 	},
 : {
 		"modifier": "00000010",
-		"key": 51
+		"decimal": 51
 	},
 : {
 		"modifier": "00000010",
-		"key": 20
+		"decimal": 20
 	},
 : {
 		"modifier": "00000010",
-		"key": 13
+		"decimal": 13
 	},
 : {
 		"modifier": "00000010",
-		"key": 14
+		"decimal": 14
 	},
 : {
 		"modifier": "00000010",
-		"key": 27
+		"decimal": 27
 	},
 : {
 		"modifier": "00000010",
-		"key": 5
+		"decimal": 5
 	},
 : {
 		"modifier": "00000010",
-		"key": 16
+		"decimal": 16
 	},
 : {
 		"modifier": "00000010",
-		"key": 26
+		"decimal": 26
 	},
 : {
 		"modifier": "00000010",
-		"key": 25
+		"decimal": 25
 	},
 : {
 		"modifier": "00000010",
-		"key": 29
+		"decimal": 29
 	}
