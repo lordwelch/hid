@@ -74,6 +74,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	fmt.Println(cfgPath)
+	fmt.Println(keymapsF)
 
 	hidg0, err = os.OpenFile("/dev/hidg0", os.O_WRONLY, os.ModePerm)
 	if err != nil {
