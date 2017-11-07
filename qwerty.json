@@ -374,5 +374,17 @@
 	"~": {
 		"modifier": "00000010",
 		"decimal": 53
+	},
+	"\t": {
+		"modifier": "00000000",
+		"decimal": 43
+	},
+	"\n": {
+		"modifier": "00000000",
+		"decimal": 40
+	},
+	" ": {
+		"modifier": "00000000",
+		"decimal": 44
 	}
 }
