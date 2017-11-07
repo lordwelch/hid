@@ -122,7 +122,7 @@ func main() {
 		)
 
 		r, _, err = stdin.ReadRune()
-		fmt.Printf("%s\n", r)
+		fmt.Printf("%s\n", string(r))
 		if err != nil {
 			panic(err)
 		}
