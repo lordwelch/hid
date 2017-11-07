@@ -110,7 +110,7 @@ func main() {
 				panic(err)
 			}
 
-			err = json.Unmarshal(content, tmp)
+			err = json.Unmarshal(content, &tmp)
 			if err != nil {
 				panic(err)
 			}
