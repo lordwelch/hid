@@ -49,8 +49,8 @@ func Hold(press [8]byte, file io.Writer) {
 }
 
 func changeKeymap(r rune, keys map[string]Keys, args Args, hidg0 *os.File, currentKeyMap *int) {
-	fmt.Println(*currentKeyMap)
-	fmt.Println(args)
+	//fmt.Println(*currentKeyMap)
+	//fmt.Println(args)
 	kmap := args.ORDER[(*currentKeyMap)]
 	fmt.Println(kmap)
 	for keys[kmap][string(r)].Decimal == 0 {
@@ -72,13 +72,24 @@ func main() {
 		cfgPath       = "./" //path.Join(os.Getenv("XDG_CONFIG_HOME"), "hid")
 		stdin         = bufio.NewReader(os.Stdin)
 		currentKeyMap int
+		flags         = map[string]byte{
+			"LSHIFT": LSHIFT,
+			"LCTRL":  LCTRL,
+			"LALT":   LALT,
+			"LSUPER": LSUPER,
+			"RSHIFT": RSHIFT,
+			"RCTRL":  RCTRL,
+			"RALT":   RALT,
+			"RSUPER": RSUPER,
+			"NONE":   0,
+		}
 	)
 	arg.MustParse(&args)
 	keymapsF, err = ioutil.ReadDir(cfgPath)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(cfgPath)
+	//fmt.Println(cfgPath)
 	fmt.Println(keymapsF)
 
 	hidg0, err = os.OpenFile("/dev/hidg0", os.O_WRONLY, os.ModePerm)
@@ -92,14 +103,14 @@ func main() {
 		)
 
 		ext = path.Ext(file.Name())
-		fmt.Println(ext)
+		//fmt.Println(ext)
 		if strings.ToLower(ext) == ".json" {
 			var (
 				tmp     Keys
 				T       *os.File
 				content []byte
 			)
-			fmt.Println(file.Name())
+			//fmt.Println(file.Name())
 			T, err = os.Open(file.Name())
 			if err != nil {
 				panic(err)
@@ -115,7 +126,7 @@ func main() {
 				panic(err)
 			}
 
-			fmt.Println(strings.TrimSuffix(file.Name(), ext))
+			//fmt.Println(strings.TrimSuffix(file.Name(), ext))
 			keys[strings.TrimSuffix(file.Name(), ext)] = tmp
 			T.Close()
 		}
@@ -139,8 +150,8 @@ func main() {
 			panic(err)
 		}
 		changeKeymap(r, keys, args, hidg0, &currentKeyMap)
-		_, err = fmt.Sscanf(keys[args.ORDER[currentKeyMap]][string(r)].Modifier, "%b", flag)
-		binary.LittleEndian.PutUint16(report[:], uint16(keys[args.ORDER[currentKeyMap]][string(r)].Decimal))
+		flag = flags[keys[args.ORDER[currentKeyMap]][string(r)].Modifier]
+		binary.BigEndian.PutUint16(report[:], uint16(keys[args.ORDER[currentKeyMap]][string(r)].Decimal))
 		fmt.Printf("report: % x\n", report)
 		fmt.Println("decimal: ", keys[args.ORDER[currentKeyMap]][string(r)].Decimal)
 		Press([8]byte{flag, 0, report[0], report[1], report[2], report[3], report[4], report[5]}, hidg0)
