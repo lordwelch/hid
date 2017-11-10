@@ -119,7 +119,7 @@ func main() {
 				content []byte
 			)
 
-			T, err = os.Open(file.Name())
+			T, err = os.Open(path.Join(cfgPath, file.Name()))
 			if err != nil {
 				panic(err)
 			}
