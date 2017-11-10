@@ -40,8 +40,6 @@ const (
 func Press(press [8]byte, file io.Writer) {
 	binary.Write(file, binary.BigEndian, press[:])
 	binary.Write(file, binary.BigEndian, [8]byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00})
-
-	fmt.Println([8]byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00})
 }
 
 func Hold(press [8]byte, file io.Writer) {
@@ -139,7 +137,7 @@ func main() {
 			T.Close()
 		}
 	}
-	fmt.Println(keys)
+	//fmt.Println(keys)
 	for {
 		var (
 			r      rune
