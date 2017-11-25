@@ -55,7 +55,7 @@ func changeKeymap(r rune, keys map[string]Keys, args Args, hidg0 *os.File, curre
 		Press([8]byte{LCTRL, 0x00, 0x57, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
 		*currentKeyMap++
 		if *currentKeyMap == len(keys) {
-			panic("key not in keymap")
+			fmt.Println("key not in keymap: " + string(r))
 		}
 	}
 }
