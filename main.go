@@ -47,23 +47,26 @@ func Hold(press [8]byte, file io.Writer) {
 }
 
 func keymapto0(args Args, hidg0 *os.File, currentKeyMap *int) {
-
-	for i := 0; i <= len(args.ORDER)-(*currentKeyMap+1); i++ {
-		Press([8]byte{LALT, 0x00, 0x39, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
+	if len(args.ORDER) > 1 {
+		for i := 0; i < len(args.ORDER)-(*currentKeyMap); i++ {
+			Press([8]byte{LALT, 0x00, 0x39, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
+		}
 	}
 }
 
 func changeKeymap(r rune, keys map[string]Keys, args Args, hidg0 *os.File, currentKeyMap *int) {
-	for i := 0; i < len(args.ORDER); i++ {
-		if keys[args.ORDER[(*currentKeyMap)]][string(r)].Decimal == 0 {
-			Press([8]byte{LALT, 0x00, 0x39, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
-			if *currentKeyMap == len(args.ORDER)-1 {
-				*currentKeyMap = 0
-			} else {
-				*currentKeyMap++
-			}
-			if i == len(args.ORDER)-1 {
-				fmt.Println("key not in keymap: " + string(r))
+	if len(args.ORDER) > 1 {
+		for i := 0; i < len(args.ORDER); i++ {
+			if keys[args.ORDER[(*currentKeyMap)]][string(r)].Decimal == 0 {
+				Press([8]byte{LALT, 0x00, 0x39, 0x00, 0x00, 0x00, 0x00, 0x00}, hidg0)
+				if *currentKeyMap == len(args.ORDER)-1 {
+					*currentKeyMap = 0
+				} else {
+					*currentKeyMap++
+				}
+				if i == len(args.ORDER)-1 {
+					fmt.Println("key not in keymap: " + string(r))
+				}
 			}
 		}
 	}

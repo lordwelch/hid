@@ -81,11 +81,11 @@
 	},
 	"": {
 		"modifier": ["LSHIFT"],
-		"decimal": 46
+		"decimal": 45
 	},
 	"‍": {
 		"modifier": ["LSHIFT"],
-		"decimal": 45
+		"decimal": 46
 	},
 	"": {
 		"modifier": ["NONE"],
