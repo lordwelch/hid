@@ -15,8 +15,8 @@ import (
 )
 
 type Key struct {
-	Modifier string `json:"modifier"`
-	Decimal  int    `json:"decimal"`
+	Modifier []string `json:"modifier"`
+	Decimal  int      `json:"decimal"`
 }
 
 type Keys map[string]Key
@@ -165,10 +165,13 @@ func main() {
 			panic(err)
 		}
 		changeKeymap(r, keys, args, hidg0, &currentKeyMap)
-		flag = flags[keys[args.ORDER[currentKeyMap]][string(r)].Modifier]
+		keys[args.ORDER[currentKeyMap]][string(r)].Modifier
+		for _, v := range keys[args.ORDER[currentKeyMap]][string(r)].Modifier {
+			flag = flag | v
+		}
 		binary.BigEndian.PutUint16(report[:], uint16(keys[args.ORDER[currentKeyMap]][string(r)].Decimal))
 		Press([8]byte{flag, 0, report[0], report[1], report[2], report[3], report[4], report[5]}, hidg0)
-
+		flag = 0
 	}
 	keymapto0(args, hidg0, &currentKeyMap)
 	fmt.Println("Success!")

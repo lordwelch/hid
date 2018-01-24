@@ -1,366 +1,554 @@
 {
-	"": {
+	"1": {
 		"modifier": ["NONE"],
 		"decimal": 30
 	},
-	"": {
+	"2": {
 		"modifier": ["NONE"],
 		"decimal": 31
 	},
-	"": {
+	"3": {
 		"modifier": ["NONE"],
 		"decimal": 32
 	},
-	"": {
+	"4": {
 		"modifier": ["NONE"],
 		"decimal": 33
 	},
-	"": {
+	"5": {
 		"modifier": ["NONE"],
 		"decimal": 34
 	},
-	"": {
+	"6": {
 		"modifier": ["NONE"],
 		"decimal": 35
 	},
-	"": {
+	"7": {
 		"modifier": ["NONE"],
 		"decimal": 36
 	},
-	"": {
+	"8": {
 		"modifier": ["NONE"],
 		"decimal": 37
 	},
-	"": {
+	"9": {
 		"modifier": ["NONE"],
 		"decimal": 38
 	},
-	"": {
+	"0": {
 		"modifier": ["NONE"],
 		"decimal": 39
 	},
-	"": {
+	"־": {
 		"modifier": ["NONE"],
 		"decimal": 45
 	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 46
-	},
-	"": {
+//	"=": {
+//		"modifier": ["NONE"],
+//		"decimal": 46
+//	},
+	"֩": {
 		"modifier": ["LSHIFT"],
 		"decimal": 30
 	},
-	"": {
-		"modifier": ["RALT"],
+	"֙": {
+		"modifier": ["LSHIFT"],
 		"decimal": 31
 	},
-	"": {
+	"֒": {
 		"modifier": ["LSHIFT"],
 		"decimal": 32
 	},
-	"": {
+	"֯": {
+		"modifier": ["LSHIFT"],
+		"decimal": 33
+	},
+	"ֺ": {
+		"modifier": ["LSHIFT"],
+		"decimal": 34
+	},
+	"ֹ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 35
 	},
-	"⁊": {
+	"ֿ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 36
 	},
-	"⸭": {
+	"ׂ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 37
 	},
-	"": {
+	"ׁ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 38
 	},
-	"": {
+	"֝": {
 		"modifier": ["LSHIFT"],
 		"decimal": 39
 	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 46
-	},
-	"‍": {
+	"֠": {
 		"modifier": ["LSHIFT"],
 		"decimal": 45
 	},
-	"": {
+	"ּ": {
+		"modifier": ["LSHIFT"],
+		"decimal": 46
+	},
+	"₪": {
+		"modifier": ["RALT"],
+		"decimal": 33
+	},
+	"‍": {
+		"modifier": ["RALT"],
+		"decimal": 34
+	},
+	"‌": {
+		"modifier": ["RALT"],
+		"decimal": 35
+	},
+	"͏": {
+		"modifier": ["RALT"],
+		"decimal": 36
+	},
+	"‎": {
+		"modifier": ["RALT"],
+		"decimal": 37
+	},
+	"‏": {
+		"modifier": ["RALT"],
+		"decimal": 38
+	},
+	"◌": {
+		"modifier": ["RALT"],
+		"decimal": 39
+	},
+	"-": {
+		"modifier": ["RALT"],
+		"decimal": 45
+	},
+	"1": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 30
+	},
+	"2": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 31
+	},
+	"3": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 32
+	},
+	"4": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 33
+	},
+	"5": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 34
+	},
+	"6": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 35
+	},
+	"7": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 36
+	},
+	"8": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 37
+	},
+	"9": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 38
+	},
+	"0": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 39
+	},
+	"_": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 45
+	},
+	"+": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 46
+	},
+	"̇": {
 		"modifier": ["NONE"],
 		"decimal": 20
 	},
-	"": {
+	"׳": {
 		"modifier": ["NONE"],
 		"decimal": 26
 	},
-	"": {
+	"ק": {
 		"modifier": ["NONE"],
 		"decimal": 8
 	},
-	"": {
+	"ר": {
 		"modifier": ["NONE"],
 		"decimal": 21
 	},
-	"": {
+	"א": {
 		"modifier": ["NONE"],
 		"decimal": 23
 	},
-	"": {
+	"ט": {
 		"modifier": ["NONE"],
 		"decimal": 28
 	},
-	"": {
+	"ו": {
 		"modifier": ["NONE"],
 		"decimal": 24
 	},
-	"": {
+	"ן": {
 		"modifier": ["NONE"],
 		"decimal": 12
 	},
-	"": {
+	"ם": {
 		"modifier": ["NONE"],
 		"decimal": 18
 	},
-	"": {
+	"פ": {
 		"modifier": ["NONE"],
 		"decimal": 19
 	},
-	"": {
+	"]": {
 		"modifier": ["NONE"],
 		"decimal": 47
 	},
-	"": {
+	"[": {
 		"modifier": ["NONE"],
 		"decimal": 48
 	},
-	"": {
+	"ׄ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 20
 	},
-	"": {
+	"֬": {
 		"modifier": ["LSHIFT"],
 		"decimal": 26
 	},
-	"": {
+	"֫": {
 		"modifier": ["LSHIFT"],
 		"decimal": 8
 	},
-	"": {
+	"֟": {
 		"modifier": ["LSHIFT"],
 		"decimal": 21
 	},
-	"": {
+	"֓": {
 		"modifier": ["LSHIFT"],
 		"decimal": 23
 	},
-	"": {
+	"֞": {
 		"modifier": ["LSHIFT"],
 		"decimal": 28
 	},
-	"": {
+	"֜": {
 		"modifier": ["LSHIFT"],
 		"decimal": 24
 	},
-	"": {
+	"֡": {
 		"modifier": ["LSHIFT"],
 		"decimal": 12
 	},
-	"": {
+	"֕": {
 		"modifier": ["LSHIFT"],
 		"decimal": 18
 	},
-	"": {
+	"֔": {
 		"modifier": ["LSHIFT"],
 		"decimal": 19
 	},
-	"“": {
-		"modifier": ["RALT"],
+	"֗": {
+		"modifier": ["LSHIFT"],
 		"decimal": 47
 	},
-	"‘": {
-		"modifier": ["RALT"],
+	"֘": {
+		"modifier": ["LSHIFT"],
 		"decimal": 48
 	},
-	"": {
+	"̈": {
+		"modifier": ["RALT"],
+		"decimal": 20
+	},
+	"״": {
+		"modifier": ["RALT"],
+		"decimal": 26
+	},
+	"€": {
+		"modifier": ["RALT"],
+		"decimal": 8
+	},
+	"װ": {
+		"modifier": ["RALT"],
+		"decimal": 24
+	},
+	"ש": {
 		"modifier": ["NONE"],
 		"decimal": 4
 	},
-	"": {
+	"/": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 20
+	},
+	"'": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 26
+	},
+	"}": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 47
+	},
+	"{": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 48
+	},
+	"ד": {
 		"modifier": ["NONE"],
 		"decimal": 22
 	},
-	"": {
+	"ג": {
 		"modifier": ["NONE"],
 		"decimal": 7
 	},
-	"": {
+	"כ": {
 		"modifier": ["NONE"],
 		"decimal": 9
 	},
-	"": {
+	"ע": {
 		"modifier": ["NONE"],
 		"decimal": 10
 	},
-	"": {
+	"י": {
 		"modifier": ["NONE"],
 		"decimal": 11
 	},
-	"": {
+	"ח": {
 		"modifier": ["NONE"],
 		"decimal": 13
 	},
-	"": {
+	"ל": {
 		"modifier": ["NONE"],
 		"decimal": 14
 	},
-	"": {
+	"ך": {
 		"modifier": ["NONE"],
 		"decimal": 15
 	},
-	"჻": {
+	"ף": {
 		"modifier": ["NONE"],
 		"decimal": 51
 	},
-	"": {
+	"֚": {
 		"modifier": ["NONE"],
 		"decimal": 52
 	},
-	"": {
+	"ֽ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 4
 	},
-	"": {
+	"ְ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 22
 	},
-	"": {
+	"ֻ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 7
 	},
-	"": {
+	"ִ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 9
 	},
-	"": {
+	"ֱ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 10
 	},
-	"": {
+	"ֶ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 11
 	},
-	"": {
+	"ֵ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 13
 	},
-	"": {
+	"ֳ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 14
 	},
-	"": {
+	"ָ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 15
 	},
-	"⁝": {
+	"ֲ": {
 		"modifier": ["LSHIFT"],
 		"decimal": 51
 	},
-	"’": {
+	"ַ": {
+		"modifier": ["LSHIFT"],
+		"decimal": 52
+	},
+	"ײ": {
+		"modifier": ["RALT"],
+		"decimal": 11
+	},
+	"ױ": {
+		"modifier": ["RALT"],
+		"decimal": 13
+	},
+	"ׇ": {
+		"modifier": ["RALT"],
+		"decimal": 15
+	},
+	",": {
 		"modifier": ["RALT"],
 		"decimal": 52
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 29
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 27
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 6
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 25
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 5
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 17
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 16
-	},
-	"⸱": {
-		"modifier": ["NONE"],
-		"decimal": 54
-	},
-	"⁘": {
-		"modifier": ["NONE"],
-		"decimal": 55
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 56
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 29
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 27
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 6
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 25
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 5
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 17
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 16
 	},
 	":": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 51
+	},
+	"\"": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 52
+	},
+	"ז": {
+		"modifier": ["NONE"],
+		"decimal": 29
+	},
+	"ס": {
+		"modifier": ["NONE"],
+		"decimal": 27
+	},
+	"ב": {
+		"modifier": ["NONE"],
+		"decimal": 6
+	},
+	"ה": {
+		"modifier": ["NONE"],
+		"decimal": 25
+	},
+	"נ": {
+		"modifier": ["NONE"],
+		"decimal": 5
+	},
+	"מ": {
+		"modifier": ["NONE"],
+		"decimal": 17
+	},
+	"צ": {
+		"modifier": ["NONE"],
+		"decimal": 16
+	},
+	"ת": {
+		"modifier": ["NONE"],
+		"decimal": 54
+	},
+	"ץ": {
+		"modifier": ["NONE"],
+		"decimal": 55
+	},
+	"֭": {
+		"modifier": ["NONE"],
+		"decimal": 56
+	},
+	"ׅ": {
+		"modifier": ["LSHIFT"],
+		"decimal": 29
+	},
+	"֤": {
+		"modifier": ["LSHIFT"],
+		"decimal": 27
+	},
+	"֪": {
+		"modifier": ["LSHIFT"],
+		"decimal": 6
+	},
+	"֦": {
+		"modifier": ["LSHIFT"],
+		"decimal": 25
+	},
+	"֥": {
+		"modifier": ["LSHIFT"],
+		"decimal": 5
+	},
+	"֧": {
+		"modifier": ["LSHIFT"],
+		"decimal": 17
+	},
+	"֛": {
+		"modifier": ["LSHIFT"],
+		"decimal": 16
+	},
+	"֑": {
 		"modifier": ["LSHIFT"],
 		"decimal": 54
 	},
-	"⸬": {
+	"֖": {
 		"modifier": ["LSHIFT"],
 		"decimal": 55
 	},
-	"": {
+	"֣": {
 		"modifier": ["LSHIFT"],
 		"decimal": 56
 	},
-	"": {
+	"֢": {
+		"modifier": ["RALT"],
+		"decimal": 6
+	},
+	"׆": {
+		"modifier": ["RALT"],
+		"decimal": 5
+	},
+	".": {
+		"modifier": ["RALT"],
+		"decimal": 56
+	},
+	">": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 54
+	},
+	"<": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 55
+	},
+	"?": {
+		"modifier": ["RALT","LSHIFT"],
+		"decimal": 56
+	},
+	"׀": {
 		"modifier": ["NONE"],
 		"decimal": 49
 	},
-	"": {
+	"֨": {
 		"modifier": ["LSHIFT"],
 		"decimal": 49
 	},
-	"": {
+	"\\": {
+		"modifier": ["RALT"],
+		"decimal": 49
+	},
+	"|": {
+		"modifier": ["RALT"],
+		"decimal": 49
+	},
+	"׃": {
 		"modifier": ["NONE"],
+		"decimal": 53
+	},
+	"֮": {
+		"modifier": ["LSHIFT"],
+		"decimal": 53
+	},
+	";": {
+		"modifier": ["RALT"],
+		"decimal": 53
+	},
+	"~": {
+		"modifier": ["RALT","LSHIFT"],
 		"decimal": 53
 	},
 	"\t": {
