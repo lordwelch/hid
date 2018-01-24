@@ -1,8 +1,4 @@
 {
-	"0": {
-		"modifier": "NONE",
-		"decimal": 39
-	},
 	"1": {
 		"modifier": "NONE",
 		"decimal": 30
@@ -39,9 +35,25 @@
 		"modifier": "NONE",
 		"decimal": 38
 	},
+	"0": {
+		"modifier": "NONE",
+		"decimal": 39
+	},
+	"-": {
+		"modifier": "NONE",
+		"decimal": 45
+	},
+	"=": {
+		"modifier": "NONE",
+		"decimal": 46
+	},
 	"!": {
 		"modifier": "LSHIFT",
 		"decimal": 30
+	},
+	"@": {
+		"modifier": "LSHIFT",
+		"decimal": 31
 	},
 	"#": {
 		"modifier": "LSHIFT",
@@ -55,13 +67,17 @@
 		"modifier": "LSHIFT",
 		"decimal": 34
 	},
+	"^": {
+		"modifier": "LSHIFT",
+		"decimal": 35
+	},
 	"&": {
 		"modifier": "LSHIFT",
 		"decimal": 36
 	},
-	"'": {
-		"modifier": "NONE",
-		"decimal": 52
+	"*": {
+		"modifier": "LSHIFT",
+		"decimal": 37
 	},
 	"(": {
 		"modifier": "LSHIFT",
@@ -71,113 +87,93 @@
 		"modifier": "LSHIFT",
 		"decimal": 39
 	},
-	"*": {
-		"modifier": "LSHIFT",
-		"decimal": 37
-	},
 	"+": {
 		"modifier": "LSHIFT",
 		"decimal": 46
 	},
-	",": {
-		"modifier": "NONE",
-		"decimal": 54
-	},
-	"-": {
-		"modifier": "NONE",
+	"_": {
+		"modifier": "LSHIFT",
 		"decimal": 45
 	},
-	".": {
+	"q": {
 		"modifier": "NONE",
-		"decimal": 55
+		"decimal": 20
 	},
-	"/": {
+	"w": {
 		"modifier": "NONE",
-		"decimal": 56
+		"decimal": 26
 	},
-	":": {
-		"modifier": "LSHIFT",
-		"decimal": 51
-	},
-	";": {
+	"e": {
 		"modifier": "NONE",
-		"decimal": 51
+		"decimal": 8
 	},
-	"<": {
-		"modifier": "LSHIFT",
-		"decimal": 54
-	},
-	"=": {
+	"r": {
 		"modifier": "NONE",
-		"decimal": 46
+		"decimal": 21
 	},
-	">": {
-		"modifier": "LSHIFT",
-		"decimal": 55
+	"t": {
+		"modifier": "NONE",
+		"decimal": 23
 	},
-	"?": {
-		"modifier": "LSHIFT",
-		"decimal": 56
+	"y": {
+		"modifier": "NONE",
+		"decimal": 28
 	},
-	"@": {
-		"modifier": "LSHIFT",
-		"decimal": 31
+	"u": {
+		"modifier": "NONE",
+		"decimal": 24
 	},
-	"A": {
-		"modifier": "LSHIFT",
-		"decimal": 4
+	"i": {
+		"modifier": "NONE",
+		"decimal": 12
 	},
-	"B": {
-		"modifier": "LSHIFT",
-		"decimal": 5
+	"o": {
+		"modifier": "NONE",
+		"decimal": 18
 	},
-	"C": {
-		"modifier": "LSHIFT",
-		"decimal": 6
+	"p": {
+		"modifier": "NONE",
+		"decimal": 19
 	},
-	"D": {
+	"[": {
+		"modifier": "NONE",
+		"decimal": 47
+	},
+	"]": {
+		"modifier": "NONE",
+		"decimal": 48
+	},
+	"Q": {
 		"modifier": "LSHIFT",
-		"decimal": 7
+		"decimal": 20
+	},
+	"W": {
+		"modifier": "LSHIFT",
+		"decimal": 26
 	},
 	"E": {
 		"modifier": "LSHIFT",
 		"decimal": 8
 	},
-	"F": {
+	"R": {
 		"modifier": "LSHIFT",
-		"decimal": 9
+		"decimal": 21
 	},
-	"G": {
+	"T": {
 		"modifier": "LSHIFT",
-		"decimal": 10
+		"decimal": 23
 	},
-	"H": {
+	"Y": {
 		"modifier": "LSHIFT",
-		"decimal": 11
+		"decimal": 28
+	},
+	"U": {
+		"modifier": "LSHIFT",
+		"decimal": 24
 	},
 	"I": {
 		"modifier": "LSHIFT",
 		"decimal": 12
-	},
-	"J": {
-		"modifier": "LSHIFT",
-		"decimal": 13
-	},
-	"K": {
-		"modifier": "LSHIFT",
-		"decimal": 14
-	},
-	"L": {
-		"modifier": "LSHIFT",
-		"decimal": 15
-	},
-	"M": {
-		"modifier": "LSHIFT",
-		"decimal": 16
-	},
-	"N": {
-		"modifier": "LSHIFT",
-		"decimal": 17
 	},
 	"O": {
 		"modifier": "LSHIFT",
@@ -187,93 +183,25 @@
 		"modifier": "LSHIFT",
 		"decimal": 19
 	},
-	"Q": {
+	"{": {
 		"modifier": "LSHIFT",
-		"decimal": 20
-	},
-	"R": {
-		"modifier": "LSHIFT",
-		"decimal": 21
-	},
-	"S": {
-		"modifier": "LSHIFT",
-		"decimal": 22
-	},
-	"T": {
-		"modifier": "LSHIFT",
-		"decimal": 23
-	},
-	"U": {
-		"modifier": "LSHIFT",
-		"decimal": 24
-	},
-	"V": {
-		"modifier": "LSHIFT",
-		"decimal": 25
-	},
-	"W": {
-		"modifier": "LSHIFT",
-		"decimal": 26
-	},
-	"X": {
-		"modifier": "LSHIFT",
-		"decimal": 27
-	},
-	"Y": {
-		"modifier": "LSHIFT",
-		"decimal": 28
-	},
-	"Z": {
-		"modifier": "LSHIFT",
-		"decimal": 29
-	},
-	"[": {
-		"modifier": "NONE",
 		"decimal": 47
 	},
-	"\"": {
+	"}": {
 		"modifier": "LSHIFT",
-		"decimal": 52
-	},
-	"\\": {
-		"modifier": "NONE",
-		"decimal": 49
-	},
-	"]": {
-		"modifier": "NONE",
 		"decimal": 48
-	},
-	"^": {
-		"modifier": "LSHIFT",
-		"decimal": 35
-	},
-	"_": {
-		"modifier": "LSHIFT",
-		"decimal": 45
-	},
-	"`": {
-		"modifier": "NONE",
-		"decimal": 53
 	},
 	"a": {
 		"modifier": "NONE",
 		"decimal": 4
 	},
-	"b": {
+	"s": {
 		"modifier": "NONE",
-		"decimal": 5
-	},
-	"c": {
-		"modifier": "NONE",
-		"decimal": 6
+		"decimal": 22
 	},
 	"d": {
 		"modifier": "NONE",
 		"decimal": 7
-	},
-	"e": {
-		"modifier": "NONE",
-		"decimal": 8
 	},
 	"f": {
 		"modifier": "NONE",
@@ -287,10 +215,6 @@
 		"modifier": "NONE",
 		"decimal": 11
 	},
-	"i": {
-		"modifier": "NONE",
-		"decimal": 12
-	},
 	"j": {
 		"modifier": "NONE",
 		"decimal": 13
@@ -303,73 +227,149 @@
 		"modifier": "NONE",
 		"decimal": 15
 	},
-	"m": {
+	";": {
 		"modifier": "NONE",
-		"decimal": 16
+		"decimal": 51
 	},
-	"n": {
+	"'": {
 		"modifier": "NONE",
-		"decimal": 17
+		"decimal": 52
 	},
-	"o": {
-		"modifier": "NONE",
-		"decimal": 18
+	"A": {
+		"modifier": "LSHIFT",
+		"decimal": 4
 	},
-	"p": {
-		"modifier": "NONE",
-		"decimal": 19
-	},
-	"q": {
-		"modifier": "NONE",
-		"decimal": 20
-	},
-	"r": {
-		"modifier": "NONE",
-		"decimal": 21
-	},
-	"s": {
-		"modifier": "NONE",
+	"S": {
+		"modifier": "LSHIFT",
 		"decimal": 22
 	},
-	"t": {
-		"modifier": "NONE",
-		"decimal": 23
+	"D": {
+		"modifier": "LSHIFT",
+		"decimal": 7
 	},
-	"u": {
-		"modifier": "NONE",
-		"decimal": 24
+	"F": {
+		"modifier": "LSHIFT",
+		"decimal": 9
 	},
-	"v": {
-		"modifier": "NONE",
-		"decimal": 25
+	"G": {
+		"modifier": "LSHIFT",
+		"decimal": 10
 	},
-	"w": {
-		"modifier": "NONE",
-		"decimal": 26
+	"H": {
+		"modifier": "LSHIFT",
+		"decimal": 11
 	},
-	"x": {
-		"modifier": "NONE",
-		"decimal": 27
+	"J": {
+		"modifier": "LSHIFT",
+		"decimal": 13
 	},
-	"y": {
-		"modifier": "NONE",
-		"decimal": 28
+	"K": {
+		"modifier": "LSHIFT",
+		"decimal": 14
+	},
+	"L": {
+		"modifier": "LSHIFT",
+		"decimal": 15
+	},
+	":": {
+		"modifier": "LSHIFT",
+		"decimal": 51
+	},
+	"\"": {
+		"modifier": "LSHIFT",
+		"decimal": 52
 	},
 	"z": {
 		"modifier": "NONE",
 		"decimal": 29
 	},
-	"{": {
+	"x": {
+		"modifier": "NONE",
+		"decimal": 27
+	},
+	"c": {
+		"modifier": "NONE",
+		"decimal": 6
+	},
+	"v": {
+		"modifier": "NONE",
+		"decimal": 25
+	},
+	"b": {
+		"modifier": "NONE",
+		"decimal": 5
+	},
+	"n": {
+		"modifier": "NONE",
+		"decimal": 17
+	},
+	"m": {
+		"modifier": "NONE",
+		"decimal": 16
+	},
+	",": {
+		"modifier": "NONE",
+		"decimal": 54
+	},
+	".": {
+		"modifier": "NONE",
+		"decimal": 55
+	},
+	"/": {
+		"modifier": "NONE",
+		"decimal": 56
+	},
+	"Z": {
 		"modifier": "LSHIFT",
-		"decimal": 47
+		"decimal": 29
+	},
+	"X": {
+		"modifier": "LSHIFT",
+		"decimal": 27
+	},
+	"C": {
+		"modifier": "LSHIFT",
+		"decimal": 6
+	},
+	"V": {
+		"modifier": "LSHIFT",
+		"decimal": 25
+	},
+	"B": {
+		"modifier": "LSHIFT",
+		"decimal": 5
+	},
+	"N": {
+		"modifier": "LSHIFT",
+		"decimal": 17
+	},
+	"M": {
+		"modifier": "LSHIFT",
+		"decimal": 16
+	},
+	"<": {
+		"modifier": "LSHIFT",
+		"decimal": 54
+	},
+	">": {
+		"modifier": "LSHIFT",
+		"decimal": 55
+	},
+	"?": {
+		"modifier": "LSHIFT",
+		"decimal": 56
+	},
+	"\\": {
+		"modifier": "NONE",
+		"decimal": 49
 	},
 	"|": {
 		"modifier": "LSHIFT",
 		"decimal": 49
 	},
-	"}": {
-		"modifier": "LSHIFT",
-		"decimal": 48
+	"`": {
+		"modifier": "NONE",
+		"decimal": 53
 	},
 	"~": {
 		"modifier": "LSHIFT",
