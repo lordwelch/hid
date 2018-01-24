@@ -43,10 +43,6 @@
 		"modifier": ["NONE"],
 		"decimal": 45
 	},
-//	"=": {
-//		"modifier": ["NONE"],
-//		"decimal": 46
-//	},
 	"֩": {
 		"modifier": ["LSHIFT"],
 		"decimal": 30

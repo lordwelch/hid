@@ -165,9 +165,8 @@ func main() {
 			panic(err)
 		}
 		changeKeymap(r, keys, args, hidg0, &currentKeyMap)
-		keys[args.ORDER[currentKeyMap]][string(r)].Modifier
 		for _, v := range keys[args.ORDER[currentKeyMap]][string(r)].Modifier {
-			flag = flag | v
+			flag = flag | flags[v]
 		}
 		binary.BigEndian.PutUint16(report[:], uint16(keys[args.ORDER[currentKeyMap]][string(r)].Decimal))
 		Press([8]byte{flag, 0, report[0], report[1], report[2], report[3], report[4], report[5]}, hidg0)
