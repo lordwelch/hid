@@ -23,7 +23,7 @@ type Keys map[string]Key
 
 type Args struct {
 	SHORTCUT string   `arg:"-S,help:Keymap cycle shortcut"`
-	ORDER    []string `arg:"positional,help:Order of keymaps"`
+	ORDER    []string `arg:"required,positional,help:Order of keymaps"`
 }
 
 const (
