@@ -150,6 +150,7 @@ func main() {
 		}
 	}
 	//fmt.Println(keys)
+	cnt := 0
 	for {
 		var (
 			r      rune
@@ -158,7 +159,6 @@ func main() {
 		)
 
 		r, _, err = stdin.ReadRune()
-		//fmt.Printf("%s\n", string(r))
 
 		if err == io.EOF {
 			break
@@ -168,12 +168,47 @@ func main() {
 			panic(err)
 		}
 		changeKeymap(r, keys, args, hidg0, &currentKeyMap)
+		report[0] = uint8(keys[args.ORDER[currentKeyMap]][string(r)].Decimal)
 		for _, v := range keys[args.ORDER[currentKeyMap]][string(r)].Modifier {
 			flag = flag | flags[v]
 		}
-		binary.BigEndian.PutUint16(report[:], uint16(keys[args.ORDER[currentKeyMap]][string(r)].Decimal))
+		for i := 1; i < 6; i++ {
+			var (
+				mod byte
+				rn  rune
+			)
+			rn, _, err = stdin.ReadRune()
+
+			if err == io.EOF {
+				break
+			}
+
+			if err != nil {
+				panic(err)
+			}
+
+			for _, v := range keys[args.ORDER[currentKeyMap]][string(rn)].Modifier {
+				mod = mod | flags[v]
+			}
+			uniq := true
+			for u := 0; u < i; u++ {
+				if uint8(keys[args.ORDER[currentKeyMap]][string(rn)].Decimal) == report[u] {
+					uniq = false
+					break
+				}
+			}
+			if keys[args.ORDER[(currentKeyMap)]][string(rn)].Decimal != 0 && mod == flag && uniq {
+				report[i] = uint8(keys[args.ORDER[currentKeyMap]][string(rn)].Decimal)
+			} else {
+				stdin.UnreadRune()
+				break
+			}
+		}
+
+		changeKeymap(r, keys, args, hidg0, &currentKeyMap)
 		Press([8]byte{flag, 0, report[0], report[1], report[2], report[3], report[4], report[5]}, hidg0)
 		flag = 0
+		cnt++
 	}
 	keymapto0(args, hidg0, &currentKeyMap)
 	fmt.Println("Success!")
