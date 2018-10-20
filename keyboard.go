@@ -62,7 +62,7 @@ var (
 		"RSUPER": RSUPER,
 		"NONE":   NONE,
 	}
-	Hidg0 io.WriteCloser
+	Hidg0 io.Writer
 )
 
 func (k Keyboard) Write(p []byte) (n int, err error) {
@@ -71,9 +71,6 @@ func (k Keyboard) Write(p []byte) (n int, err error) {
 
 func Write(r io.Reader) error {
 	_, err := io.Copy(Keyboard{}, r)
-	if closeCheck, ok := r.(io.Closer); ok {
-		closeCheck.Close()
-	}
 	return err
 }
 
@@ -99,37 +96,37 @@ func write(p []byte) (n int, err error) {
 			}
 			cur, ok := CurrentKeymap()[string(r)]
 			if !ok {
-				if i == 2 {
+				if i == 2 { // can't press two keys from different keymaps
 					if !changeKeymap(r) && ErrOnUnknownKey {
 						return index, fmt.Errorf("rune not in keymap: %c", r)
 					}
 				} else {
-					break press // I should make a temp var to hold this Usage id to reduce unneeded processing
+					break
 				}
 			}
 
 			// Check if this is a delay
 			if cur.DelayDelimiter {
 				index += s + parseDelay(p[index:])
-				break press // I should make a temp var to hold this Usage id to reduce unneeded processing
+				break
 			}
 
 			// Calculate next modifier byte
 			for _, v := range cur.Modifier {
 				mod = mod | flags[v]
 			}
-			// Set the modifier if it is the firs key otherwise
+			// Set the modifier if it is the first key otherwise
 			// check if the next modifier byte is the same
 			if i == 2 {
 				flag = mod
 			} else if flag != mod {
-				break press // I should make a temp var to hold this Usage id to reduce unneeded processing
+				break
 			}
 
 			// Check for duplicate key press. You can't press a key if it is already pressed.
 			for u := 2; u < i; u++ {
 				if cur.Decimal == report[u] {
-					break press // I should make a temp var to hold this Usage id to reduce unneeded processing
+					break press
 				}
 			}
 			report[i] = cur.Decimal

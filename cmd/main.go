@@ -1,43 +1,39 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
-
-	"github.com/alexflint/go-arg"
-
-	"golang.org/x/text/encoding/unicode"
-	"golang.org/x/text/transform"
-
-	"timmy.narnian.us/git/timmy/hid"
+	"timmy.narnian.us/hid/ghid"
 )
 
 func main() {
 	var (
-		err error
-
-		args struct {
-			SHORTCUT string   `arg:"-S,help:Keymap cycle shortcut"`
-			PATH     string   `arg:"-P,help:Path to config dir default: $XDG_CONFIG_HOME"`
-			ORDER    []string `arg:"required,positional,help:Order of keymaps"`
-		}
+		SHORTCUT string
 	)
-	args.PATH = os.ExpandEnv("$XDG_CONFIG_HOME")
-	arg.MustParse(&args)
-	hid.KeymapOrder = args.ORDER
 
-	hid.KeymapPath = args.PATH
+	flag.StringVar(&SHORTCUT, "shortcut", "", "Keymap cycle shortcut")
+	flag.StringVar(&SHORTCUT, "s", "", "Keymap cycle shortcut")
+	flag.StringVar(&hid.KeymapPath, "path", os.ExpandEnv("$XDG_CONFIG_HOME"), "Path to config dir default: $XDG_CONFIG_HOME")
+	flag.StringVar(&hid.KeymapPath, "p", os.ExpandEnv("$XDG_CONFIG_HOME"), "Path to config dir default: $XDG_CONFIG_HOME")
+	flag.Parse()
+
+	hid.KeymapOrder = flag.Args()
+
 	fmt.Println(hid.KeymapPath)
 
-	hid.Hidg0, err = os.OpenFile("hidg0", os.O_APPEND|os.O_WRONLY, 0755)
+	file, err := os.OpenFile("/dev/hidg0", os.O_APPEND|os.O_WRONLY, 0755)
 	if err != nil {
 		panic(err)
 	}
-	hid.Write(transform.NewReader(os.Stdin, unicode.BOMOverride(unicode.UTF8.NewDecoder())))
+	hid.Hidg0 = file
+	defer file.Close()
 
-	// if err != nil {
-	// 	panic(err)
-	// }
+	hid.Write(os.Stdin)
+
+	if err != nil {
+		panic(err)
+	}
 
 	fmt.Println("Success!")
 }
