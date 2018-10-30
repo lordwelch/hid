@@ -386,5 +386,10 @@
 	" ": {
 		"modifier": ["NONE"],
 		"decimal": 44
+	},
+	"⏲": {
+		"modifier": ["NONE"],
+		"decimal": 0,
+		"delayDelimiter": true
 	}
 }

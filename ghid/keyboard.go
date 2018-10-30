@@ -89,7 +89,9 @@ func write(p []byte) (n int, err error) {
 			var (
 				mod byte
 			)
-
+			if DefaultDelay > 0 && i > 2 {
+				break
+			}
 			r, s = utf8.DecodeRune(p[index:])
 			if r == utf8.RuneError {
 				return index, fmt.Errorf("invalid rune: 0x%X", p[index]) // This probably screws things up if the last rune in 'p' is incomplete
@@ -173,6 +175,7 @@ func delay() {
 
 func Press(press [8]byte, file io.Writer) {
 	file.Write(press[:])
+	time.Sleep(DefaultDelay)
 	file.Write([]byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00})
 }
 
