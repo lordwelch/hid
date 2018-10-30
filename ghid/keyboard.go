@@ -109,7 +109,7 @@ func write(p []byte) (n int, err error) {
 
 			// Check if this is a delay
 			if cur.DelayDelimiter {
-				index += s + parseDelay(p[index:])
+				index += s + parseDelay(p[index+s:])
 				break
 			}
 
@@ -135,7 +135,8 @@ func write(p []byte) (n int, err error) {
 			index += s
 		}
 		report[0] = flag
-
+		r, _ = utf8.DecodeRune(p[index-1:])
+		fmt.Printf("%c: delay: %v %v\n", r, DefaultDelay, DefaultDelay > (0))
 		Press(report, Hidg0)
 		delay()
 	}
@@ -169,7 +170,7 @@ func delay() {
 			syncCheck.Sync()
 		}
 		time.Sleep(DefaultDelay)
-		DefaultDelay = 0
+		// DefaultDelay = 0
 	}
 }
 
