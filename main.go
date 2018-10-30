@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+
 	"timmy.narnian.us/hid/ghid"
 )
 

@@ -175,6 +175,7 @@ func delay() {
 
 func Press(press [8]byte, file io.Writer) {
 	file.Write(press[:])
+	Hidg0.(syncer).Sync()
 	time.Sleep(DefaultDelay)
 	file.Write([]byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00})
 }
