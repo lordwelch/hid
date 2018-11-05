@@ -18,17 +18,22 @@ type syncer interface {
 	Sync() error
 }
 
+// A Key is a USB HID value
 type Key struct {
-	Modifier       []string `json:"modifier"`
-	Decimal        byte     `json:"decimal"`
-	DelayDelimiter bool     `json:"delayDelimiter,omitempty"`
+	Modifier              []string `json:"modifier"`
+	Decimal               byte     `json:"decimal"`
+	PressDelayDelimiter   bool     `json:"pressDelayDelimiter,omitempty"`
+	ReleaseDelayDelimiter bool     `json:"releaseDelayDelimiter,omitempty"`
+	Comment               bool     `json:"comment,omitempty"`
 }
 
+// A Keymap is a json representation of the unicode rune mapped to its USB HID value
 type Keymap map[string]Key
 
+// Keyboard is a type to attach the methods to if someone wants to use it
 type Keyboard struct{}
 
-const NONE = 0
+// bit flag of modifier keys
 const (
 	LCTRL byte = 1 << iota
 	LSHIFT
@@ -38,20 +43,22 @@ const (
 	RSHIFT
 	RALT
 	RSUPER
+	NONE = 0
 )
 
 const delayDelimiter = "⏲"
 
 var (
-	currentKeyMap int
-	DefaultDelay  time.Duration
+	PressDelay      time.Duration // PressDelay is the time in ms to delay befor sending a press event
+	ReleaseDelay    time.Duration // ReleaseDelay is the time in ms to wait before sending the release event
+	KeymapOrder     []string      // Keymap Order is the order in which the specified keymaps cycle on the computer
+	KeymapShortcut  [8]byte       // KeymapShortcut is the key combo that will cycle the current keymap by one
+	ErrOnUnknownKey bool          // ErrOnUnknownKey whether or not to fail if the unicode rune is invalid or is not in the specified keymaps
+	KeymapPath      string        // KeymapPath is the pathe to where the keymap files are stored
 
-	KeymapOrder     []string = []string{"qwerty"}
-	KeymapShortcut  [8]byte
-	ErrOnUnknownKey bool
-	KeymapPath      string
-	keys            = make(map[string]Keymap)
-	flags           = map[string]byte{
+	currentKeyMap int
+	keys          = make(map[string]Keymap)
+	flags         = map[string]byte{
 		"LSHIFT": LSHIFT,
 		"LCTRL":  LCTRL,
 		"LALT":   LALT,
@@ -89,9 +96,6 @@ func write(p []byte) (n int, err error) {
 			var (
 				mod byte
 			)
-			if DefaultDelay > 0 && i > 2 {
-				break
-			}
 			r, s = utf8.DecodeRune(p[index:])
 			if r == utf8.RuneError {
 				return index, fmt.Errorf("invalid rune: 0x%X", p[index]) // This probably screws things up if the last rune in 'p' is incomplete
@@ -103,48 +107,70 @@ func write(p []byte) (n int, err error) {
 						return index, fmt.Errorf("rune not in keymap: %c", r)
 					}
 				} else {
-					break
-				}
-			}
-
-			// Check if this is a delay
-			if cur.DelayDelimiter {
-				index += s + parseDelay(p[index+s:])
-				break
-			}
-
-			// Calculate next modifier byte
-			for _, v := range cur.Modifier {
-				mod = mod | flags[v]
-			}
-			// Set the modifier if it is the first key otherwise
-			// check if the next modifier byte is the same
-			if i == 2 {
-				flag = mod
-			} else if flag != mod {
-				break
-			}
-
-			// Check for duplicate key press. You can't press a key if it is already pressed.
-			for u := 2; u < i; u++ {
-				if cur.Decimal == report[u] {
 					break press
 				}
 			}
+
+			switch {
+			case cur.PressDelayDelimiter:
+				var n int
+				n, PressDelay = parseDelay(p[index+s:])
+				index += s + n
+				break press
+
+			case cur.ReleaseDelayDelimiter:
+				var n int
+				n, PressDelay = parseDelay(p[index+s:])
+				index += s + n
+				break press
+
+			case cur.Comment:
+				var n int
+				n = bytes.Index(p[index+s:], []byte("\n"))
+				if n < 0 {
+					n = 0
+				}
+				index += s + n
+				break press
+
+			default:
+				// Calculate next modifier byte
+				for _, v := range cur.Modifier {
+					mod = mod | flags[v]
+				}
+
+				// Set the modifier if it is the first key otherwise
+				// check if the next modifier byte is the same
+				if i == 2 {
+					flag = mod
+				} else if flag != mod {
+					break press
+				}
+
+				// Check for duplicate key press. You can't press a key if it is already pressed.
+				for u := 2; u < i; u++ {
+					if cur.Decimal == report[u] {
+						break press
+					}
+				}
+
+			}
 			report[i] = cur.Decimal
 			index += s
+			if PressDelay > 0 {
+				break press
+			}
 		}
 		report[0] = flag
 		r, _ = utf8.DecodeRune(p[index-1:])
-		fmt.Printf("%c: delay: %v %v\n", r, DefaultDelay, DefaultDelay > (0))
 		Press(report, Hidg0)
-		delay()
+		delay(PressDelay)
 	}
 	keymapto0() // To make it reproducible
 	return index, nil
 }
 
-func parseDelay(buffer []byte) int {
+func parseDelay(buffer []byte) (count int, delay time.Duration) {
 	var index int
 	sb := strings.Builder{}
 	for index < len(buffer) {
@@ -158,26 +184,24 @@ func parseDelay(buffer []byte) int {
 	}
 	i, err := strconv.Atoi(sb.String())
 	if err == nil || err == strconv.ErrRange {
-		DefaultDelay = time.Millisecond * time.Duration(i)
-		return index
+		return index, time.Millisecond * time.Duration(i)
 	}
-	return 0
+	return 0, 0
 }
 
-func delay() {
-	if DefaultDelay > 0 {
+func delay(Delay time.Duration) {
+	if Delay > 0 {
 		if syncCheck, ok := Hidg0.(syncer); ok {
 			syncCheck.Sync()
 		}
-		time.Sleep(DefaultDelay)
+		time.Sleep(Delay)
 		// DefaultDelay = 0
 	}
 }
 
 func Press(press [8]byte, file io.Writer) {
 	file.Write(press[:])
-	Hidg0.(syncer).Sync()
-	time.Sleep(DefaultDelay)
+	delay(ReleaseDelay)
 	file.Write([]byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00})
 }
 
@@ -198,37 +222,40 @@ func changeKeymap(r rune) bool {
 	buf := bytes.NewBuffer(make([]byte, 0, 8*len(KeymapOrder))) // To batch shortcut presses
 
 	for i := 0; i < len(KeymapOrder); i++ {
-		if _, ok := CurrentKeymap()[string(r)]; ok {
+		_, ok := CurrentKeymap()[string(r)]
+		if ok {
 			Hidg0.Write(buf.Bytes())
 			return true
-		} else {
-			Press(KeymapShortcut, buf)
-			if currentKeyMap == len(KeymapOrder)-1 {
-				currentKeyMap = 0
-			} else {
-				currentKeyMap++
-			}
 		}
+		Press(KeymapShortcut, buf)
+		if currentKeyMap == len(KeymapOrder)-1 {
+			currentKeyMap = 0
+		} else {
+			currentKeyMap++
+		}
+
 	}
 	return false
 }
 
 func CurrentKeymap() Keymap {
-	if keymap, ok := keys[KeymapOrder[currentKeyMap]]; ok {
+	keymap, ok := keys[KeymapOrder[currentKeyMap]]
+	if ok {
 		return keymap
-	} else {
-		return LoadKeymap(KeymapOrder[currentKeyMap])
 	}
+	return LoadKeymap(KeymapOrder[currentKeyMap])
+
 }
 
 func LoadKeymap(keymapName string) Keymap {
 	var (
 		err     error
 		content []byte
+		file    = path.Join(path.Join(KeymapPath, "hid"), keymapName+".json")
 		tmp     = make(Keymap, 0)
 	)
-	fmt.Println(path.Join(path.Join(KeymapPath, "hid"), keymapName+".json"))
-	content, err = ioutil.ReadFile(path.Join(path.Join(KeymapPath, "hid"), keymapName+".json"))
+	fmt.Println(file)
+	content, err = ioutil.ReadFile(file)
 	if err != nil {
 		return nil
 	}

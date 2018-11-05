@@ -386,5 +386,20 @@
 	" ": {
 		"modifier": ["NONE"],
 		"decimal": 44
+	},
+	"⏲": {
+		"modifier": ["NONE"],
+		"decimal": 0,
+		"PressDelayDelimiter": true
+	},
+	"🐉": {
+		"modifier": ["NONE"],
+		"decimal": 0,
+		"releaseDelayDelimiter": true
+	},
+	"⨌": {
+		"modifier": ["NONE"],
+		"decimal": 0,
+		"comment": true
 	}
 }

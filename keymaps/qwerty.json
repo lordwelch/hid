@@ -390,6 +390,16 @@
 	"⏲": {
 		"modifier": ["NONE"],
 		"decimal": 0,
-		"delayDelimiter": true
+		"PressDelayDelimiter": true
+	},
+	"🐉": {
+		"modifier": ["NONE"],
+		"decimal": 0,
+		"releaseDelayDelimiter": true
+	},
+	"⨌": {
+		"modifier": ["NONE"],
+		"decimal": 0,
+		"comment": true
 	}
 }

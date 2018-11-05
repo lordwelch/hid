@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"time"
 
 	"timmy.narnian.us/hid/ghid"
 )
@@ -20,6 +21,7 @@ func main() {
 	flag.Parse()
 
 	hid.KeymapOrder = flag.Args()
+	hid.ReleaseDelay = time.Duration(10) * time.Millisecond
 
 	fmt.Println(hid.KeymapPath)
 
