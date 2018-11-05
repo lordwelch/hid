@@ -46,8 +46,6 @@ const (
 	NONE = 0
 )
 
-const delayDelimiter = "⏲"
-
 var (
 	PressDelay      time.Duration // PressDelay is the time in ms to delay befor sending a press event
 	ReleaseDelay    time.Duration // ReleaseDelay is the time in ms to wait before sending the release event
@@ -179,6 +177,13 @@ func parseDelay(buffer []byte) (count int, delay time.Duration) {
 			sb.WriteRune(r)
 			index += s
 		} else {
+			if r == '\r' {
+				index += s
+				r, s = utf8.DecodeRune(buffer[index:])
+			}
+			if r == '\n' {
+				index += s
+			}
 			break
 		}
 	}
