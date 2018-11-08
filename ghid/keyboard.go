@@ -47,7 +47,7 @@ const (
 )
 
 var (
-	PressDelay      time.Duration // PressDelay is the time in ms to delay befor sending a press event
+	PressDelay      time.Duration // PressDelay is the time in ms to delay before sending a press event
 	ReleaseDelay    time.Duration // ReleaseDelay is the time in ms to wait before sending the release event
 	KeymapOrder     []string      // Keymap Order is the order in which the specified keymaps cycle on the computer
 	KeymapShortcut  [8]byte       // KeymapShortcut is the key combo that will cycle the current keymap by one
@@ -118,7 +118,7 @@ func write(p []byte) (n int, err error) {
 
 			case cur.ReleaseDelayDelimiter:
 				var n int
-				n, PressDelay = parseDelay(p[index+s:])
+				n, ReleaseDelay = parseDelay(p[index+s:])
 				index += s + n
 				break press
 
@@ -200,7 +200,6 @@ func delay(Delay time.Duration) {
 			syncCheck.Sync()
 		}
 		time.Sleep(Delay)
-		// DefaultDelay = 0
 	}
 }
 
