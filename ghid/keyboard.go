@@ -269,7 +269,6 @@ func LoadKeymap(keymapName string) Keymap {
 		return nil
 	}
 
-	//fmt.Println(strings.TrimSuffix(file.Name(), ext))
 	keys[keymapName] = tmp
 	return keys[keymapName]
 }
