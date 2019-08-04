@@ -1,297 +1,377 @@
 {
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 30
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 31
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 32
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 33
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 34
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 35
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 36
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 37
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 38
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 39
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 45
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 46
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 30
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 31
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 32
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 33
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 34
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 35
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 36
-	},
-	"*": {
-		"modifier": ["LSHIFT"],
-		"decimal": 37
-	},
-	"(": {
-		"modifier": ["LSHIFT"],
-		"decimal": 38
-	},
-	")": {
-		"modifier": ["LSHIFT"],
-		"decimal": 39
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 45
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 46
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 20
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 26
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 8
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 21
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 23
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 28
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 24
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 12
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 18
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 19
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 47
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 48
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 20
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 26
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 8
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 21
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 23
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 28
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 24
-	},
-	"I": {
-		"modifier": ["LSHIFT"],
-		"decimal": 12
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 18
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 4
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 22
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 7
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 9
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 10
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 11
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 13
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 14
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 15
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 51
-	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 52
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 4
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 22
-	},
-	"": {
-		"modifier": ["LSHIFT"],
-		"decimal": 15
-	},
 	"": {
 		"modifier": ["NONE"],
-		"decimal": 29
+		"decimal": 30
 	},
 	"": {
 		"modifier": ["NONE"],
-		"decimal": 27
+		"decimal": 31
 	},
 	"": {
 		"modifier": ["NONE"],
-		"decimal": 6
+		"decimal": 32
 	},
 	"": {
 		"modifier": ["NONE"],
-		"decimal": 25
+		"decimal": 33
 	},
 	"": {
 		"modifier": ["NONE"],
-		"decimal": 5
+		"decimal": 34
 	},
 	"": {
 		"modifier": ["NONE"],
-		"decimal": 17
+		"decimal": 35
 	},
 	"": {
 		"modifier": ["NONE"],
-		"decimal": 16
+		"decimal": 36
 	},
 	"": {
 		"modifier": ["NONE"],
-		"decimal": 54
+		"decimal": 37
 	},
 	"": {
 		"modifier": ["NONE"],
+		"decimal": 38
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 39
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 45
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 46
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 30
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 31
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 32
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 33
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 34
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 35
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 36
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 37
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 38
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 39
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 45
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 46
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 20
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 26
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 8
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 21
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 23
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 28
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 24
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 12
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 18
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 19
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 47
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 48
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 20
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 26
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 8
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 21
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 23
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 28
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 24
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 12
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 18
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 19
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 47
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 48
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 4
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 22
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 7
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 9
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 10
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 11
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 13
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 14
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 15
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 51
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 52
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 4
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 22
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 7
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 9
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 10
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 11
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 13
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 14
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 15
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 51
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 52
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 29
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 27
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 6
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 25
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 5
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 17
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 16
+	},
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 54
+	},
+	"": {
+		"modifier": ["NONE"],
 		"decimal": 55
 	},
-	"": {
+	"": {
+		"modifier": ["NONE"],
+		"decimal": 56
+	},
+	"": {
 		"modifier": ["LSHIFT"],
 		"decimal": 29
 	},
-	"": {
+	"": {
 		"modifier": ["LSHIFT"],
 		"decimal": 27
 	},
-	"": {
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 6
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 25
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 5
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 17
+	},
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 16
+	},
+	"W": {
+		"modifier": ["LSHIFT"],
+		"decimal": 54
+	},
+	"": {
 		"modifier": ["LSHIFT"],
 		"decimal": 55
 	},
-	"": {
-		"modifier": ["NONE"],
-		"decimal": 49
+	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 56
 	},
 	"": {
 		"modifier": ["NONE"],
-		"decimal": 53
+		"decimal": 49
 	},
 	"": {
+		"modifier": ["LSHIFT"],
+		"decimal": 49
+	},
+	"\\": {
+		"modifier": ["NONE"],
+		"decimal": 53
+	},
+	"|": {
 		"modifier": ["LSHIFT"],
 		"decimal": 53
 	},
