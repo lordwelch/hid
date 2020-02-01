@@ -124,7 +124,7 @@ func write(p []byte) (n int, err error) {
 
 			case cur.Comment:
 				var n int
-				n = bytes.Index(p[index+s:], []byte("\n"))
+				n = bytes.Index(p[index+s:], []byte("\n")) + 1
 				if n < 0 {
 					n = 0
 				}
