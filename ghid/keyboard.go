@@ -273,6 +273,9 @@ func (k *Keyboard) CurrentKeymap() Keymap {
 	if ok {
 		return keymap
 	}
+	if k.keymaps == nil {
+		k.keymaps = make(map[string]Keymap)
+	}
 	k.keymaps[k.KeymapOrder[k.currentKeyMap]] = LoadKeymap(k.KeymapOrder[k.currentKeyMap], k.KeymapPath)
 	return k.keymaps[k.KeymapOrder[k.currentKeyMap]]
 }
