@@ -3,34 +3,52 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io"
 	"os"
+	"path"
 
-	"timmy.narnian.us/hid/ghid"
+	hid "timmy.narnian.us/hid/ghid"
 )
 
 func main() {
 	var (
-		SHORTCUT string
+		Shortcut   string
+		filePath   string
+		keymapPath string
+		err        error
+		ghid0      *os.File
+		tmp        *os.File
+		keyboard   *hid.Keyboard
 	)
-
-	flag.StringVar(&SHORTCUT, "shortcut", "", "Keymap cycle shortcut")
-	flag.StringVar(&SHORTCUT, "s", "", "Keymap cycle shortcut")
-	flag.StringVar(&hid.KeymapPath, "path", os.ExpandEnv("$XDG_CONFIG_HOME"), "Path to config dir default: $XDG_CONFIG_HOME")
-	flag.StringVar(&hid.KeymapPath, "p", os.ExpandEnv("$XDG_CONFIG_HOME"), "Path to config dir default: $XDG_CONFIG_HOME")
+	if _, exists := os.LookupEnv("XDG_CONFIG_HOME"); !exists {
+		_ = os.Setenv("XDG_CONFIG_HOME", path.Join(os.ExpandEnv("$HOME"), ".config"))
+	}
+	flag.StringVar(&Shortcut, "shortcut", "", "Keymap cycle shortcut")
+	flag.StringVar(&Shortcut, "s", "", "Keymap cycle shortcut")
+	flag.StringVar(&keymapPath, "path", path.Join(os.ExpandEnv("$XDG_CONFIG_HOME"), "hid"), "Path to config dir default: $XDG_CONFIG_HOME")
+	flag.StringVar(&keymapPath, "p", path.Join(os.ExpandEnv("$XDG_CONFIG_HOME"), "hid"), "Path to config dir default: $XDG_CONFIG_HOME")
+	flag.StringVar(&filePath, "f", "-", "The file to read content from. Defaults to stdin")
+	flag.StringVar(&filePath, "file", "-", "The file to read content from. Defaults to stdin")
 	flag.Parse()
+	fmt.Println(keymapPath)
 
-	hid.KeymapOrder = flag.Args()
+	if filePath != "-" {
+		tmp, err = os.Open(path.Clean(filePath))
+		if err == nil {
+			_ = os.Stdin.Close()
+			os.Stdin = tmp
+		}
+	}
 
-	fmt.Println(hid.KeymapPath)
-
-	file, err := os.OpenFile("/dev/hidg0", os.O_APPEND|os.O_WRONLY, 0755)
+	ghid0, err = os.OpenFile("/dev/hidg0", os.O_APPEND|os.O_WRONLY, 0600)
 	if err != nil {
 		panic(err)
 	}
-	hid.Hidg0 = file
-	defer file.Close()
+	defer ghid0.Close()
 
-	hid.Write(os.Stdin)
+	keyboard = hid.NewKeyboard(hid.Modifiers, flag.Args(), keymapPath, ghid0)
+
+	_, err = io.Copy(keyboard, os.Stdin)
 
 	if err != nil {
 		panic(err)
