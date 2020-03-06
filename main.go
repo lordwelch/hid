@@ -30,6 +30,10 @@ func main() {
 	flag.StringVar(&filePath, "f", "-", "The file to read content from. Defaults to stdin")
 	flag.StringVar(&filePath, "file", "-", "The file to read content from. Defaults to stdin")
 	flag.Parse()
+	if flag.NArg() < 0 {
+		flag.Usage()
+		os.Exit(1)
+	}
 	fmt.Println(keymapPath)
 
 	if filePath != "-" {
