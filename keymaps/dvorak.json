@@ -39,7 +39,7 @@
 		"modifier": ["NONE"],
 		"decimal": 39
 	},
-	"[]": {
+	"[": {
 		"modifier": ["NONE"],
 		"decimal": 45
 	},
@@ -87,7 +87,7 @@
 		"modifier": ["LSHIFT"],
 		"decimal": 39
 	},
-	"{}": {
+	"{": {
 		"modifier": ["LSHIFT"],
 		"decimal": 45
 	},
@@ -275,7 +275,7 @@
 		"modifier": ["LSHIFT"],
 		"decimal": 51
 	},
-	"-": {
+	"_": {
 		"modifier": ["LSHIFT"],
 		"decimal": 52
 	},
