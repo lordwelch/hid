@@ -159,7 +159,6 @@ func (k *Keyboard) Write(p []byte) (int, error) {
 					}
 					// Add the modifier of the current key eg 'D' adds shift 'd' does not
 					flag |= mod
-					fmt.Printf("this press is modified %d %v\n", flag, cur)
 				}
 
 				// Check for duplicate key press. You can't press a key if it is already pressed, unless it is 0 indicating a modifier.
@@ -176,7 +175,6 @@ func (k *Keyboard) Write(p []byte) (int, error) {
 				if report[i] != 0 {
 					break press
 				}
-				fmt.Printf("this press is a modifier %v\n", cur)
 			}
 		}
 		report[0] = flag
