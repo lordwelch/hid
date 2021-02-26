@@ -137,6 +137,10 @@ func (k *Keyboard) Write(p []byte) (int, error) {
 				}
 				index += s + n
 				break press
+			case r == '␀':
+				// Causes immediate key press useful for modifier keys
+				index += s
+				break press
 
 			default:
 				// Calculate next modifier byte
@@ -149,12 +153,18 @@ func (k *Keyboard) Write(p []byte) (int, error) {
 				if i == 2 {
 					flag = mod
 				} else if flag != mod {
-					break press
+					// This is the second key press if the previous one was a modifier only Decimal == 0 then take the current key as well
+					if report[i-1] != 0 {
+						break press
+					}
+					// Add the modifier of the current key eg 'D' adds shift 'd' does not
+					flag |= mod
+					fmt.Printf("this press is modified %d %v\n", flag, cur)
 				}
 
-				// Check for duplicate key press. You can't press a key if it is already pressed.
+				// Check for duplicate key press. You can't press a key if it is already pressed, unless it is 0 indicating a modifier.
 				for u := 2; u < i; u++ {
-					if cur.Decimal == report[u] {
+					if cur.Decimal == report[u] && cur.Decimal != 0 {
 						break press
 					}
 				}
@@ -162,7 +172,11 @@ func (k *Keyboard) Write(p []byte) (int, error) {
 			report[i] = cur.Decimal
 			index += s
 			if k.PressDelay > 0 {
-				break press
+				// This is the first key press if this is a modifier only Decimal == 0 then take the next key as well
+				if report[i] != 0 {
+					break press
+				}
+				fmt.Printf("this press is a modifier %v\n", cur)
 			}
 		}
 		report[0] = flag

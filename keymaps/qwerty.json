@@ -387,6 +387,101 @@
 		"modifier": ["NONE"],
 		"decimal": 44
 	},
+	"␛": {
+		"modifier": [""],
+		"decimal": 41,
+		"PressDelayDelimiter": false
+	},
+	"⎋": {
+		"modifier": [""],
+		"decimal": 41,
+		"PressDelayDelimiter": false
+	},
+	"↘": {
+		"modifier": [""],
+		"decimal": 77,
+		"PressDelayDelimiter": false
+	},
+	"↖": {
+		"modifier": [""],
+		"decimal": 74,
+		"PressDelayDelimiter": false
+	},
+	"⇪": {
+		"modifier": [""],
+		"decimal": 57,
+		"PressDelayDelimiter": false
+	},
+	"⌃": {
+		"modifier": ["LCTRL"],
+		"decimal": 0,
+		"PressDelayDelimiter": false
+	},
+	"⇧": {
+		"modifier": ["LSHIFT"],
+		"decimal": 0,
+		"PressDelayDelimiter": false
+	},
+	"⌥": {
+		"modifier": ["LALT"],
+		"decimal": 0,
+		"PressDelayDelimiter": false
+	},
+	"⌘": {
+		"modifier": ["LSUPER"],
+		"decimal": 0,
+		"PressDelayDelimiter": false
+	},
+	"⊞": {
+		"modifier": ["LSUPER"],
+		"decimal": 0,
+		"PressDelayDelimiter": false
+	},
+	"→": {
+		"modifier": [""],
+		"decimal": 79,
+		"PressDelayDelimiter": false
+	},
+	"←": {
+		"modifier": [""],
+		"decimal": 80,
+		"PressDelayDelimiter": false
+	},
+	"↑": {
+		"modifier": [""],
+		"decimal": 81,
+		"PressDelayDelimiter": false
+	},
+	"↓": {
+		"modifier": [""],
+		"decimal": 82,
+		"PressDelayDelimiter": false
+	},
+	"⇞": {
+		"modifier": [""],
+		"decimal": 75,
+		"PressDelayDelimiter": false
+	},
+	"⇟": {
+		"modifier": [""],
+		"decimal": 78,
+		"PressDelayDelimiter": false
+	},
+	"⌫": {
+		"modifier": [""],
+		"decimal": 42,
+		"PressDelayDelimiter": false
+	},
+	"⌦": {
+		"modifier": [""],
+		"decimal": 76,
+		"PressDelayDelimiter": false
+	},
+	"␀": {
+		"modifier": [""],
+		"decimal": 0,
+		"PressDelayDelimiter": false
+	},
 	"⏲": {
 		"modifier": ["NONE"],
 		"decimal": 0,
