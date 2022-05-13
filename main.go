@@ -36,7 +36,7 @@ func main() {
 	flag.StringVar(&ghidPath, "g", "/dev/hidg0", "The device to send key presses to. Defaults to /dev/hidg0")
 	flag.StringVar(&ghidPath, "ghid", "/dev/hidg0", "The device to send key presses to. Defaults to /dev/hidg0")
 	flag.DurationVar(&pressDelay, "press", 0, "sets the default delay between presses of individual keys")
-	flag.DurationVar(&releaseDelay, "press", 0, "sets the default delay between sending the press of an individual key and sending the release")
+	flag.DurationVar(&releaseDelay, "release", 0, "sets the default delay between sending the press of an individual key and sending the release")
 	flag.Parse()
 	if flag.NArg() < 0 {
 		flag.Usage()
