@@ -103,15 +103,19 @@ func (k *Keyboard) Write(p []byte) (int, error) {
 			}
 			cur, ok := k.CurrentKeymap()[string(r)]
 			if !ok {
-				if i == 3 { // can't press two keys from different keymaps
+				if i == 2 { // We can change the keymap if we are on the first key
 					ok, err = k.changeKeymap(r)
-					if !ok && k.ErrOnUnknownKey {
-						if err != nil {
-							return index, err
+					if !ok { // rune does not have a mapping
+						if k.ErrOnUnknownKey {
+							if err != nil {
+								return index, err
+							}
+							return index, fmt.Errorf("rune not in keymap: %c", r)
 						}
-						return index, fmt.Errorf("rune not in keymap: %c", r)
+						index += s
+						break press
 					}
-				} else {
+				} else { // rune does not have a mapping in this keymaps
 					break press
 				}
 			}
@@ -157,7 +161,7 @@ func (k *Keyboard) Write(p []byte) (int, error) {
 					if report[i-1] != 0 {
 						break press
 					}
-					// Add the modifier of the current key eg 'D' adds shift 'd' does not
+					// Add the modifier of the current key eg 'D' adds shift; 'd' does not
 					flag |= mod
 				}
 
