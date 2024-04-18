@@ -68,6 +68,17 @@ var (
 		"RSUPER": RSUPER,
 		"NONE":   NONE,
 	}
+	AllModifiers = []string{
+		"LSHIFT",
+		"LCTRL",
+		"LALT",
+		"LSUPER",
+		"RSHIFT",
+		"RCTRL",
+		"RALT",
+		"RSUPER",
+		"NONE",
+	}
 )
 
 func NewKeyboard(Modifiers map[string]byte, kemapOrder []string, KeymapPath string, hidg0 io.Writer) *Keyboard {
@@ -251,7 +262,7 @@ func (k *Keyboard) Hold(press [8]byte, file io.Writer) error {
 func (k *Keyboard) keymapto0() error {
 	if len(k.KeymapOrder) > 1 {
 		for i := 0; i < len(k.KeymapOrder)-(k.currentKeyMap); i++ {
-			err := k.Press([8]byte{LALT, 0x00, 0x39, 0x00, 0x00, 0x00, 0x00, 0x00}, k.Hidg0)
+			err := k.Press(k.KeymapShortcut, k.Hidg0)
 			if err != nil {
 				return err
 			}
