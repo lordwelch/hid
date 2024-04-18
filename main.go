@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	hid "github.com/lordwelch/hid/ghid"
+	hid "gitea.narnian.us/lordwelch/hid/ghid"
 )
 
 func contains(str string, find []string) bool {
