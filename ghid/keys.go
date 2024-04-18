@@ -3,6 +3,7 @@ package hid
 var (
 	StandardKeys = map[string]byte{
 		"␀":  0x00,
+		"":  0x00,
 		"a":  0x04,
 		"A":  0x04,
 		"b":  0x05,

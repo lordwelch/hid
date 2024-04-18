@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"flag"
 	"fmt"
 	"io"
@@ -32,14 +31,14 @@ func parse_shortcut(shortcut string) ([8]byte, error) {
 	)
 	strs := strings.SplitN(strings.ToLower(shortcut), " ", 2)
 	if len(strs) > 1 {
+		modifiers = strings.Split(strs[0], "|")
+		key = strings.TrimSpace(strs[1])
+	} else {
 		if contains(strs[0], hid.AllModifiers) {
 			modifiers = strings.Split(strs[0], "|")
 		} else {
 			key = strings.TrimSpace(strs[0])
 		}
-	} else {
-		modifiers = strings.Split(strs[0], "|")
-		key = strings.TrimSpace(strs[1])
 	}
 	for _, v := range modifiers {
 		curModifier |= hid.Modifiers[strings.TrimSpace(v)]
@@ -47,7 +46,7 @@ func parse_shortcut(shortcut string) ([8]byte, error) {
 	if id, ok := hid.StandardKeys[key]; ok {
 		curKey = id
 	} else {
-		return [8]byte{}, errors.New("Key not found")
+		return [8]byte{}, fmt.Errorf("Key %q not found", key)
 	}
 	return [8]byte{curModifier, 0x0, curKey}, nil
 }
@@ -94,7 +93,7 @@ keymap:
 	for _, requestedKeymap := range flag.Args() {
 		for _, dir := range dirs {
 			if strings.HasPrefix(strings.ToLower(dir.Name()), strings.ToLower(requestedKeymap)) {
-				keymaps = append(keymaps, dir.Name())
+				keymaps = append(keymaps, strings.TrimSuffix(dir.Name(), ".json"))
 				break keymap
 			}
 		}
